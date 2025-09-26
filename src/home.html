@@ -1,83 +1,343 @@
 @@include('html/_head.htm',{
-"title":"Home"
+"title":"HomePage"
 })
 
 <body>
 	<div class="wrapper">
 		@@include('html/_header.htm',{})
-		<main class="page ">
-
-			<!-- text -->
-			<section class="section ">
-				<div class="section__container">
-					<h2 class="section__title split-text" aria-hidden="true">
-						Lorem ipsum dolor sit amet <a href="#">nested link</a> elit. Pariatur, quos!
-						Lorem ipsum dolor sit amet consectetur, adipisicing elit. A perspiciatis architecto consequatur placeat
-						earum vero!
-					</h2>
-					<p class="sr-only">
-						Lorem ipsum dolor sit amet <a href="#">nested link</a> elit. Pariatur, quos!
-						Lorem ipsum dolor sit amet consectetur, adipisicing elit. A perspiciatis architecto consequatur placeat
-						earum vero!
-					</p>
-
+		<main class="page">
+			<section class="hero">
+				<div class="hero__container">
+					<h1 class="hero__title title-1">
+						Providing Forward-Thinking
+						Solutions that Meet
+						<span>
+							Future Needs
+						</span>
+					</h1>
+					<img class="hero__image" src="@img/hero/image.svg" alt="image">
 				</div>
 			</section>
-			<section class="section ">
-				<div class="section__container">
-					<h2 class="section__title split-text">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quos!
-					</h2>
-					<div class="green-box"></div>
-					<div class="test-size" style="height: 50px; width:50px; background-color: blue;"></div>
 
+			<section class="solutions-preview section">
+				<div class="solutions-preview__container">
+					<div class="solutions-preview__header section-header">
+						<h2 class="solutions-preview__title title-2">
+							Solutions
+						</h2>
+						<a data-da=".solutions-preview__container, 480" href="advisory.html"
+							class="solutions-preview__button button button--border">
+							See All
+						</a>
+					</div>
+					<div class="solutions-preview__slider-box">
+						<div class="solutions-preview__slider swiper-solutions">
+							<div class="solutions-preview__wrapper swiper-wrapper">
+								<article class="solutions-preview__slide item-solution swiper-slide">
+									<img class="item-solution__img" loading="lazy" src="@img/home/solutions/shine1.svg" alt="decor">
+									<div class="item-solution__icon">
+										<img loading="lazy" src="@img/home/solutions/icon1.svg" alt="icon">
+									</div>
+									<h3 class="item-solution__title title-5">
+										Weather Monitoring
+										and Radar Systems
+									</h3>
+								</article>
+								<article class="solutions-preview__slide item-solution swiper-slide">
+									<img class="item-solution__img" loading="lazy" src="@img/home/solutions/shine2.svg" alt="decor">
+									<div class="item-solution__icon">
+										<img loading="lazy" src="@img/home/solutions/icon2.svg" alt="icon">
+									</div>
+									<h3 class="item-solution__title title-5">
+										Mobile Command and
+										Tactical Response
+									</h3>
+								</article>
+								<article class="solutions-preview__slide item-solution swiper-slide">
+									<img class="item-solution__img" loading="lazy" src="@img/home/solutions/shine3.svg" alt="decor">
+									<div class="item-solution__icon">
+										<img loading="lazy" src="@img/home/solutions/icon3.svg" alt="icon">
+									</div>
+									<h3 class="item-solution__title title-5">
+										Airport and Visibility Systems
+									</h3>
+								</article>
+								<article class="solutions-preview__slide item-solution swiper-slide">
+									<img class="item-solution__img" loading="lazy" src="@img/home/solutions/shine4.svg" alt="decor">
+									<div class="item-solution__icon">
+										<img loading="lazy" src="@img/home/solutions/icon4.svg" alt="icon">
+									</div>
+									<h3 class="item-solution__title title-5">
+										Flood Protection and
+										Emergency Barriers
+									</h3>
+								</article>
+								<article class="solutions-preview__slide item-solution swiper-slide">
+									<img class="item-solution__img" loading="lazy" src="@img/home/solutions/shine5.svg" alt="decor">
+									<div class="item-solution__icon">
+										<img loading="lazy" src="@img/home/solutions/icon5.svg" alt="icon">
+									</div>
+									<h3 class="item-solution__title title-5">
+										Cloud Seeding and Atmospheric Engineering
+									</h3>
+								</article>
+								<article class="solutions-preview__slide item-solution swiper-slide">
+									<img class="item-solution__img" loading="lazy" src="@img/home/solutions/shine6.svg" alt="decor">
+									<div class="item-solution__icon">
+										<img loading="lazy" src="@img/home/solutions/icon6.svg" alt="icon">
+									</div>
+									<h3 class="item-solution__title title-5">
+										Data Collection, Visualization, and Alerting Platform
+									</h3>
+								</article>
+								<!-- repeat -->
+								<article class="solutions-preview__slide item-solution swiper-slide">
+									<img class="item-solution__img" loading="lazy" src="@img/home/solutions/shine1.svg" alt="decor">
+									<div class="item-solution__icon">
+										<img loading="lazy" src="@img/home/solutions/icon1.svg" alt="icon">
+									</div>
+									<h3 class="item-solution__title title-5">
+										Weather Monitoring
+										and Radar Systems
+									</h3>
+								</article>
+								<article class="solutions-preview__slide item-solution swiper-slide">
+									<img class="item-solution__img" loading="lazy" src="@img/home/solutions/shine2.svg" alt="decor">
+									<div class="item-solution__icon">
+										<img loading="lazy" src="@img/home/solutions/icon2.svg" alt="icon">
+									</div>
+									<h3 class="item-solution__title title-5">
+										Mobile Command and
+										Tactical Response
+									</h3>
+								</article>
+								<article class="solutions-preview__slide item-solution swiper-slide">
+									<img class="item-solution__img" loading="lazy" src="@img/home/solutions/shine3.svg" alt="decor">
+									<div class="item-solution__icon">
+										<img loading="lazy" src="@img/home/solutions/icon3.svg" alt="icon">
+									</div>
+									<h3 class="item-solution__title title-5">
+										Airport and Visibility Systems
+									</h3>
+								</article>
+								<article class="solutions-preview__slide item-solution swiper-slide">
+									<img class="item-solution__img" loading="lazy" src="@img/home/solutions/shine4.svg" alt="decor">
+									<div class="item-solution__icon">
+										<img loading="lazy" src="@img/home/solutions/icon4.svg" alt="icon">
+									</div>
+									<h3 class="item-solution__title title-5">
+										Flood Protection and
+										Emergency Barriers
+									</h3>
+								</article>
+								<article class="solutions-preview__slide item-solution swiper-slide">
+									<img class="item-solution__img" loading="lazy" src="@img/home/solutions/shine5.svg" alt="decor">
+									<div class="item-solution__icon">
+										<img loading="lazy" src="@img/home/solutions/icon5.svg" alt="icon">
+									</div>
+									<h3 class="item-solution__title title-5">
+										Cloud Seeding and Atmospheric Engineering
+									</h3>
+								</article>
+								<article class="solutions-preview__slide item-solution swiper-slide">
+									<img class="item-solution__img" loading="lazy" src="@img/home/solutions/shine6.svg" alt="decor">
+									<div class="item-solution__icon">
+										<img loading="lazy" src="@img/home/solutions/icon6.svg" alt="icon">
+									</div>
+									<h3 class="item-solution__title title-5">
+										Data Collection, Visualization, and Alerting Platform
+									</h3>
+								</article>
+
+							</div>
+
+							<div class="solutions-preview__navigation navigation">
+								<div class="navigation__buttons">
+									<button type="button" class="navigation__button navigation__button--prev " aria-label="button prev">
+										<svg>
+											<use xlink:href="@img/icons/icons.svg#arrow-left"></use>
+										</svg>
+									</button>
+									<button type="button" class="navigation__button navigation__button--next" aria-label="button next">
+										<svg>
+											<use xlink:href="@img/icons/icons.svg#arrow-right"></use>
+										</svg>
+									</button>
+								</div>
+								<div class="navigation__scrollbar"></div>
+								<div class="navigation__pagination"></div>
+							</div>
+
+						</div>
+					</div>
 				</div>
+
 			</section>
-			<section class="section  ">
-				<div class="section__container">
-					<h2 class="section__title split-text">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quos!
-					</h2>
-				</div>
-			</section>
-			<!-- context -->
-			<section class="section  ">
-				<div class="section__container gap-16 flex flex-col">
-					<button class="start-last mx-auto bg-red-500 p-4 max-w-fit  rounded-lg">last el action</button>
-					<button class="trigger mx-auto bg-red-500 p-4 max-w-fit  rounded-lg">animation action</button>
-					<div class="flex gap-8">
-						<div class="el one bg-green-400"></div>
-						<div class="el two bg-violet-500"></div>
-						<div class="el three bg-blue-500"></div>
-						<div class="el four bg-gray-500"></div>
-						<div class="el five bg-yellow-500"></div>
+
+			<section class="last-cases section">
+				<div class="last-cases__container">
+					<img class="last-cases__decor last-cases__decor--top" src="@img/home/last-cases/decor-top.svg" alt="decor">
+					<img class="last-cases__decor last-cases__decor--bottom" src="@img/home/last-cases/decor-bottom.svg"
+						alt="decor">
+
+					<div class="last-cases__header section-header">
+						<h2 class="last-cases__title title-2">
+							Last Cases
+						</h2>
+						<a data-da=".last-cases__container, 480" href="cases.html" class="last-cases__button button button--border">
+							All Cases
+						</a>
+					</div>
+					<div class="last-cases__slider-box">
+						<div class="last-cases__slider swiper-cases">
+							<div class="last-cases__wrapper swiper-wrapper">
+								<div class="last-cases__slide case-item swiper-slide">
+									<div class="case-item__image">
+										<img loading="lazy" src="@img/page-cases/cases/image1.jpg" alt="Image">
+									</div>
+									<div class="case-item__content">
+										<h2 class="case-item__title">
+											National IoT River Monitoring System for Flood Early Warning in Bangladesh
+										</h2>
+										<div class="case-item__row">
+											<div class="case-item__category badge">
+												Infrastructure Protection
+											</div>
+											<div class="case-item__year">
+												2025
+											</div>
+										</div>
+										<p class="case-item__text">
+											Spanning over 800 locations, this real-time monitoring system provided unprecedented visibility
+											into river behavior
+											across flood-prone districts — transforming how authorities anticipate and respond to natural
+											hazards.
+										</p>
+									</div>
+
+								</div>
+								<div class="last-cases__slide case-item swiper-slide">
+									<div class="case-item__image">
+										<img loading="lazy" src="@img/page-cases/cases/image2.jpg" alt="Image">
+									</div>
+									<div class="case-item__content">
+										<h2 class="case-item__title">
+											Hail Suppression in Southern France
+										</h2>
+										<div class="case-item__row">
+											<div class="case-item__category badge">
+												Climate Engineering
+											</div>
+											<div class="case-item__year">
+												2024
+											</div>
+										</div>
+										<p class="case-item__text">
+											Vineyards and high-value crops in Southern France are often hit by destructive hailstorms, causing
+											millions in
+											annual losses.
+										</p>
+									</div>
+
+								</div>
+								<div class="last-cases__slide case-item swiper-slide">
+									<div class="case-item__image">
+										<img loading="lazy" src="@img/page-cases/cases/image3.jpg" alt="Image">
+									</div>
+									<div class="case-item__content">
+										<h2 class="case-item__title">
+											Flood Defense in Ravenna, Italy
+										</h2>
+										<div class="case-item__row">
+											<div class="case-item__category badge">
+												Infrastructure Protection
+											</div>
+											<div class="case-item__year">
+												2023
+											</div>
+										</div>
+										<p class="case-item__text">
+											In May 2023, severe flooding struck Northern Italy, affecting thousands and placing critical
+											infrastructure—such as data
+											centers—at high risk in the city of Ravenna.
+										</p>
+									</div>
+
+								</div>
+							</div>
+							<div class="last-cases__navigation navigation">
+								<div class="navigation__buttons">
+									<button type="button" class="navigation__button navigation__button--prev " aria-label="button prev">
+										<svg>
+											<use xlink:href="@img/icons/icons.svg#arrow-left"></use>
+										</svg>
+									</button>
+									<button type="button" class="navigation__button navigation__button--next" aria-label="button next">
+										<svg>
+											<use xlink:href="@img/icons/icons.svg#arrow-right"></use>
+										</svg>
+									</button>
+								</div>
+
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
-			<!-- keyframes -->
-			<section class="section  ">
-				<div class="section__container gap-16 flex flex-col">
-					<div class="flex gap-8 size-[150px] bg-yellow-300">
-						<div class="keyframe el  bg-green-400"></div>
+
+			<section class="about-us section" aria-labelledby="about-us">
+				<div class="about-us__container">
+
+					<h2 class="about-us__title title-2" id="about-us">
+						About Us
+					</h2>
+					<div class="about-us__header ">
+						<p class="about-us__text">
+							Critical Solutions Asia, Inc. (CS Asia) is a regional platform company that delivers mission-critical
+							technologies
+							across the Asia-Pacific—serving national agencies, public utilities, and government partners in the fields
+							of disaster
+							resilience, weather monitoring, aviation safety, and environmental engineering.
+						</p>
+						<a href="about.html" class="about-us__button navigation__button navigation__button--next"
+							aria-label="about page link ">
+							<svg>
+								<use xlink:href="@img/icons/icons.svg#arrow-right"></use>
+							</svg>
+						</a>
+					</div>
+
+					<div class="about-us__content content-about ">
+						<img class="content-about__bg" src="@img/home/about/shine.svg" alt="shine">
+						<div class="content-about__blockquote">
+							<svg class="content-about__icon">
+								<use xlink:href="@img/icons/icons.svg#quotes"></use>
+							</svg>
+							<p class="content-about__text">
+								I first traveled to Asia in 1992 and spent six months exploring different countries. From that point
+								forward, I was in
+								love with Asia and always had the idea of one day living in Asia in the back of my mind.
+							</p>
+						</div>
+						<div class="content-about__author author">
+							<div class="author__card">
+								<img class="author__image" src="@img/home/about/Robert.png" alt="Robert W. Kamerling">
+							</div>
+							<div class="author__name">
+								Robert W. Kamerling
+							</div>
+							<div class="author__position badge">
+								CEO & President
+							</div>
+						</div>
+
+
 					</div>
 				</div>
 			</section>
-			<!-- scrolltrigger -->
-			<section class="section ">
-				<div class="section__container">
-					<h2 class="section__title split-text">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quos!
-					</h2>
-					<div class="green-box"></div>
-				</div>
-			</section>
-			<section class="section  ">
-				<div class="section__container">
-					<h2 class="section__title split-text">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quos!
-					</h2>
-				</div>
-			</section>
+
+
+
 		</main>
 		@@include('html/_footer.htm',{})
 	</div>

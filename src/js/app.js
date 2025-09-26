@@ -36,7 +36,7 @@ import * as flsFunctions from "./files/functions.js";
 /* Додавання loaded для HTML після повного завантаження сторінки */
 flsFunctions.addLoadedClass();
 /* Модуль для роботи з меню (Бургер) */
-// flsFunctions.menuInit();
+flsFunctions.menuInit();
 /* Форматування чисел */
 // import './libs/wNumb.min.js';
 
@@ -167,7 +167,7 @@ flsForms.formFieldsInit({
 Документація плагіна: https://swiperjs.com/
 Сніппет(HTML): swiper
 */
-// import "./files/sliders.js";
+import "./files/sliders.js";
 
 // ================= Модулі роботи з прокручуванням сторінки
 
@@ -205,11 +205,11 @@ import * as flsScroll from "./files/scroll/scroll.js";
 
 // Плавна навігація по сторінці
 // Документація: https://template.fls.guru/template-docs/modul-plavnoj-navigacii-po-stranice.html
-// flsScroll.pageNavigation();
+flsScroll.pageNavigation();
 
 // Функціонал додавання класів до хедеру під час прокручування
 // Документація: https://template.fls.guru/template-docs/modul-dobavleniya-klassov-k-shapke-pri-prokrutke-stranicy.html
-// flsScroll.headerScroll();
+flsScroll.headerScroll();
 
 // Модуль анімація цифрового лічильника
 // Документація: https://template.fls.guru/template-docs/modul-animacii-cifrovogo-lichilnika.html
@@ -242,17 +242,17 @@ import * as flsScroll from "./files/scroll/scroll.js";
 // ================================Динамічний адаптив
 // Документація: https://template.fls.guru/template-docs/dinamicheskij-adaptiv.html
 
-// import "./libs/dynamic_adapt.js";
+import "./libs/dynamic_adapt.js";
 
 
 
 // ===============gsap=======================
 // GSAP 
-import './libs/gsap/index.js'
+// import './libs/gsap/index.js'
 
 /* Підключаємо файли зі своїм кодом */
 // with FLS functions
-// import "./files/script.js";
+import "./files/script.js";
 
 // empty file
 // import "./custom/main.js";

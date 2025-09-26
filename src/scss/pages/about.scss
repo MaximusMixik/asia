@@ -1,0 +1,73 @@
+.about {
+	// in common
+	// .about__container
+	&__container {
+		// position: relative;
+	}
+	// .about__header
+	&__header {
+		// in common
+	}
+	// .about__title
+	&__title {
+	}
+	// .about__img
+	&__img {
+		position: absolute;
+		z-index: -1;
+		object-fit: contain;
+		@media (min-width: $mobileSmall) {
+			width: toRem(320);
+			height: toRem(308);
+			right: toRem(4);
+			top: toRem(-76);
+		}
+		@media (min-width: $mobile) {
+			width: toRem(379);
+			height: toRem(365);
+			left: toRem(553);
+			top: toRem(-110);
+		}
+		@media (max-width: $mobileSmall) {
+			width: toRem(250);
+			height: toRem(240);
+			right: toRem(-89);
+			top: toRem(5);
+		}
+	}
+
+	// .about__info
+	&__info {
+		position: relative;
+		font-size: toRem(19);
+
+		& > :first-child {
+			font-weight: 500;
+			color: var(--white);
+			@media (min-width: $mobile) {
+				font-size: toRem(24);
+			}
+			@media (max-width: $mobile) {
+				font-size: toRem(22);
+			}
+			&:not(:last-child) {
+				margin-bottom: toRem(40);
+			}
+		}
+		& > :not(:last-child) {
+			margin-bottom: toRem(24);
+		}
+		@media (min-width: $mobileSmall) {
+			padding-left: 34.1%;
+		}
+		@media (min-width: $mobile) {
+			padding-left: 45.6%;
+		}
+		&:not(:last-child) {
+			margin-bottom: toRem(200);
+		}
+	}
+	// .about__content
+	&__content {
+	}
+}

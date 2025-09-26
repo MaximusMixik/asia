@@ -27,9 +27,9 @@ body {
 }
 body {
 	color: $mainColor;
-	line-height: 1;
+	line-height: 1.316;
 	font-family: $fontFamily;
-	font-size: $fontSize;
+	// font-size: $fontSize;
 	//text-rendering: optimizeLegibility;
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
@@ -69,7 +69,9 @@ a {
 ul li {
 	list-style: none;
 }
+svg,
 img {
+	max-width: 100%;
 	vertical-align: top;
 }
 h1,

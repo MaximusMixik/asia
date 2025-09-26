@@ -1,0 +1,108 @@
+@@include('html/_head.htm',{
+"title":"Сase detail page"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<img loading="lazy" class="page__decor-top" src="@img/decor-top.svg" alt="decor">
+			<article class="page__section article" aria-labelledby="article">
+				<div class="article__container">
+					<div class="article__wrap">
+						<div class="article__header ">
+							<h1 class="article__title title-3" id="article">
+								Hail Suppression in Southern France
+							</h1>
+							<div class="article__info">
+								<div class="article__meta">
+									<div class="article__category badge">
+										Climate Engineering
+									</div>
+									<div class="article__year">
+										2024
+									</div>
+								</div>
+								<a href="#" class="article__link button button--link">
+									<span>Selerys</span>
+									<svg>
+										<use xlink:href="@img/icons/icons.svg#link"></use>
+									</svg>
+								</a>
+							</div>
+							<img class="article__image" src="@img/page-article/image.jpg" alt="image">
+						</div>
+						<div class="article__content content-article ">
+
+							<div class="content-article__row">
+								<div class="content-article__caption">
+									Region
+								</div>
+								<div class="content-article__badge badge">
+									Europe (Technology Origin Use Case)
+								</div>
+							</div>
+							<div class="content-article__row">
+								<div class="content-article__caption">
+									Background
+								</div>
+								<p class="content-article__description">
+									Vineyards and high-value crops in Southern France are often hit by destructive hailstorms, causing
+									millions in annual
+									losses.
+								</p>
+							</div>
+							<div class="content-article__row">
+								<div class="content-article__caption">
+									The Challenge
+								</div>
+								<p class="content-article__text">
+									Local governments and growers needed a way to reduce hail size or prevent hail formation
+									altogether—without causing
+									ecological side effects or relying on outdated flares.
+								</p>
+							</div>
+							<div class="content-article__row">
+								<div class="content-article__caption">
+									The Solution
+								</div>
+								<p class="content-article__text">
+									Using Selerys’ cloud seeding system, aircraft equipped with smart dispersal units were deployed to
+									inject silver iodide
+									into hail-forming clouds. The system used predictive radar data to identify storm cells and
+									optimizeseeding.
+								</p>
+							</div>
+							<div class="content-article__row">
+								<div class="content-article__caption">
+									Results & Impact
+								</div>
+								<ul class="content-article__list">
+									<li> Reduced average hailstone size by over 40%</li>
+									<li>Lowered insurance claims by agricultural cooperatives</li>
+									<li>Provided real-time storm management through integrated dashboard</li>
+									<li>Built policy interest in climate adaptation through weather modification</li>
+								</ul>
+							</div>
+
+						</div>
+
+						<div class="article__action">
+							<a href="cases.html" class="article__button button button--accent-border">
+								<svg>
+									<use xlink:href="@img/icons/icons.svg#arrow-left"></use>
+								</svg>
+								<span>Back to Cases</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</article>
+
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

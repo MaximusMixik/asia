@@ -1,0 +1,29 @@
+@@include('html/_head.htm',{
+"title":"404"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page-404">
+			<section class="full">
+				<div class="full__container">
+					<img loading="lazy" class="full__decor" src="@img/decor-top.svg" alt="decor">
+					<img class="full__image" src="@img/404/image.svg" alt="404 image">
+					<h2 class="full__title title-3">
+						Page not found
+					</h2>
+					<p class="full__text">The page is out of date, has been deleted or does not exist.
+					</p>
+					<a href="home.html" class="full__button button button--blue">
+						Back to Homepage
+					</a>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

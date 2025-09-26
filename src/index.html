@@ -9,26 +9,37 @@
 
 <body>
 	<div class="rootpage">
-		<h1><span> «NEW_PROJECT_NAME»</span></h1>
+		<h1> Project - <span> «CS NEW_PROJECT_NAME»</span></h1>
+		<!-- TODO
+		1. header/footer decor
+		2. add form section
+		-->
 		<div class="rootpage__body">
 			<div class="rootpage__info">
 			</div>
-			<h2>Pages:</h2>
+			<h2>Done pages:</h2>
 			<ol class="rootpage__list">
 				<li><a target="_blank" href="home.html">Homepage</a></li>
-				<li><a target="_blank" href="tailwind.html">Tailwind</a></li>
-				<li><a target="_blank" href="gsap.html">GSAP</a></li>
+				<li><a target="_blank" href="solutions.html">Solutions</a></li>
+				<li><a target="_blank" href="cases.html">Сases</a></li>
+				<li><a target="_blank" href="article.html">Сase detail page (article)</a></li>
+				<li><a target="_blank" href="about.html">About</a></li>
+				<li><a target="_blank" href="policy.html">Privacy Policy</a></li>
+				<li><a target="_blank" href="404.html">404</a></li>
 			</ol>
 		</div>
 	</div>
 </body>
 <style>
+	@charset "UTF-8";
+	@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap");
+
 	*,
 	*::before,
 	*::after {
-		padding: 0;
-		margin: 0;
-		border: 0;
+		padding: 0px;
+		margin: 0px;
+		border: 0px;
 		box-sizing: border-box;
 	}
 
@@ -37,7 +48,7 @@
 		height: 100%;
 		margin: 0;
 		padding: 0;
-		min-width: 20rem;
+		min-width: 320px;
 		width: 100%;
 		color: #fff;
 		background-color: #101010;
@@ -53,7 +64,6 @@
 	a {
 		text-decoration: underline;
 		color: #56e52e;
-		transition-duration: .3s;
 	}
 
 	a:visited {
@@ -80,7 +90,8 @@
 	}
 
 	.rootpage {
-		padding: 3rem;
+		padding: 30px;
+
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
@@ -95,7 +106,7 @@
 
 	@media (max-width: 767px) {
 		.rootpage {
-			padding: 1.875rem .9375rem;
+			padding: 30px 15px;
 		}
 	}
 
@@ -104,7 +115,7 @@
 	h1 {
 		color: #66ff3c;
 		font-size: 2.5rem;
-		margin: 0 0 1.25rem 0;
+		margin: 0px 0px 1.25rem 0px;
 		align-self: center;
 
 	}
@@ -116,38 +127,38 @@
 	@media (max-width: 767px) {
 		h1 {
 			font-size: 1.85rem;
-			margin: 0 0 1.25rem 0;
+			margin: 0px 0px 1.25rem 0px;
 		}
 	}
 
 	h2 {
 		color: #66ff3c;
 		font-size: 1.25rem;
-		margin: 0 0 1rem 0;
+		margin: 0px 0px 1rem 0px;
 	}
 
 	@media (max-width: 767px) {
 		h2 {
 			font-size: 1.125rem;
-			margin: 0 0 1rem 0;
+			margin: 0px 0px 1rem 0px;
 		}
 	}
 
 	.rootpage__info {
-		line-height: 1.4;
-		margin: 0 0 1.5rem 0;
+		line-height: 140%;
+		margin: 0px 0px 1.5rem 0px;
 	}
 
 	.rootpage__list {
-		margin: 0 0 2.25rem 1.25rem;
+		margin: 0px 0px 2.25rem 1.25rem;
 	}
 
 	.rootpage__list li:not(:last-child) {
-		margin: 0 0 .9375rem 0;
+		margin: 0px 0px 15px 0px;
 	}
 
 	.rootpage__contacts {
-		line-height: 1.4;
+		line-height: 140%;
 		align-self: center;
 
 	}

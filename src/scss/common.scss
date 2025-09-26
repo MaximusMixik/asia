@@ -1,1 +1,625 @@
-// Заголовки, загальні БЕМ блоки та інше...
+// page
+.page {
+	position: relative;
+	// .page__decor-top
+	&__decor-top {
+		position: absolute;
+		object-fit: contain;
+		left: 0;
+		z-index: -1;
+		transform: translateX(-50%);
+		@media (min-width: $mobileSmall) {
+			width: toRem(500);
+			height: toRem(500);
+			top: toRem(532);
+		}
+		@media (min-width: $tablet) {
+			top: toRem(810);
+		}
+		@media (max-width: $mobileSmall) {
+			width: toRem(300);
+			height: toRem(300);
+			top: toRem(741);
+		}
+	}
+	// .page__section
+	&__section {
+		@media (min-width: $mobileSmall) {
+			padding-block: toRem(137) toRem(220);
+		}
+		@media (min-width: $mobile) {
+			padding-block: toRem(110) toRem(280);
+		}
+		@media (max-width: $mobileSmall) {
+			padding-block: toRem(75) toRem(220);
+		}
+	}
+	// .page__header
+	&__header {
+		position: relative;
+		&:not(:last-child) {
+			@media (min-width: $mobileSmall) {
+				margin-bottom: toRem(200);
+			}
+			@media (min-width: $mobile) {
+				margin-bottom: toRem(240);
+			}
+			@media (max-width: $mobileSmall) {
+				margin-bottom: toRem(290);
+			}
+		}
+	}
+}
+
+h1,
+.title-1,
+h2,
+.title-2,
+h3,
+.title-3,
+h4,
+.title-4,
+h5,
+.title-5,
+h6,
+.title-6 {
+	font-family: $fontFamilyLufga;
+	font-weight: 500;
+}
+h1,
+.title-1 {
+	line-height: 1.06;
+	max-width: max-content;
+	@include adaptiveValue("font-size", 64, 38, 0, $tabletWidth, 628);
+}
+.title-1 {
+	background: linear-gradient(57deg, #fff 30%, #92a4af 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	& span {
+		display: block;
+		background: linear-gradient(47deg, #99e1d9 0%, #3b736d 100%);
+		max-width: max-content;
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+}
+h2,
+.title-2 {
+	line-height: 1.04;
+	@include adaptiveValue("font-size", 49, 32, 0, $tabletWidth, 445);
+}
+.title-2 {
+	max-width: max-content;
+	background: linear-gradient(57deg, #fff 30%, #92a4af 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.title-3,
+h3 {
+	@include adaptiveValue("font-size", 38, 28);
+}
+
+.title-4,
+h4 {
+	@media (min-width: $mobileSmall) {
+		font-size: toRem(32);
+	}
+	@media (max-width: $mobileSmall) {
+		font-size: toRem(24);
+	}
+}
+
+.title-5,
+h5 {
+	@media (min-width: $mobileSmall) {
+		font-size: toRem(24);
+	}
+	@media (max-width: $mobileSmall) {
+		font-size: toRem(21);
+	}
+}
+
+.title-6,
+h6 {
+	@media (min-width: $mobileSmall) {
+		font-size: toRem(20);
+	}
+	@media (max-width: $mobileSmall) {
+		font-size: toRem(19);
+	}
+}
+
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: toRem(8);
+	-webkit-tap-highlight-color: transparent;
+	text-align: center;
+	color: var(--white);
+	font-family: $fontFamilyLufga;
+	font-size: toRem(15);
+	font-weight: 500;
+	// line-height: 1.2;
+	line-height: 1;
+	border-radius: toRem(50);
+	// padding: toRem(12) toRem(20);
+	padding: toRem(8) toRem(20);
+	min-height: toRem(44);
+	cursor: pointer;
+
+	& svg {
+		width: toRem(24);
+		height: toRem(24);
+		object-fit: contain;
+		flex-shrink: 0;
+	}
+	@media (any-hover: hover) {
+		transition:
+			width 0.3s ease,
+			border-color 0.3s ease;
+		&:hover {
+			border-color: var(--accent);
+		}
+	}
+	&--link {
+		color: var(--tiffany);
+		border: toRem(2) solid var(--tiffany);
+
+		font-size: toRem(14);
+		padding: toRem(8) toRem(14);
+		min-height: toRem(36);
+		& svg {
+			width: toRem(16);
+			height: toRem(16);
+		}
+	}
+	&--border {
+		border: toRem(2) solid var(--gray1);
+
+		@media (any-hover: hover) {
+			&:hover {
+				border-color: var(--tiffany);
+			}
+		}
+	}
+	&--accent-border {
+		border: toRem(2) solid var(--tiffany);
+		@media (any-hover: hover) {
+			&:hover {
+				border-color: var(--tiffany);
+			}
+		}
+	}
+	// .button--arrow
+	&--arrow {
+		width: toRem(44);
+		height: toRem(44);
+		position: relative;
+		border-color: #2f776f;
+		// transition: width 0.3s ease !important;
+
+		& span {
+			// overflow: hidden;
+			opacity: 0;
+			width: 0;
+			transition:
+				width 0.4s ease,
+				opacity 0.1s ease;
+		}
+		& svg {
+			position: absolute;
+			object-fit: contain;
+			right: toRem(4);
+			transition: all 0.4s ease;
+			& path {
+				transition: fill 0.4s ease;
+			}
+		}
+		@media (any-hover: hover) {
+			.item-preview:hover &,
+			&:hover {
+				border-color: var(--accent);
+				width: toRem(104);
+				// width: max-content;
+				& span {
+					// width: max-content;
+					// padding-right: toRem(46);
+					width: toRem(60);
+					padding-right: toRem(27);
+					opacity: 1;
+					transition:
+						width 0.4s ease,
+						opacity 0.3s ease;
+					// transition: all 0.3s ease;
+				}
+				& svg {
+					& path {
+						fill: var(--white);
+					}
+				}
+			}
+		}
+	}
+	//
+	// .button--blue
+	&--accent,
+	&--blue {
+		color: var(--black);
+		padding: toRem(12) toRem(20);
+		background-color: var(--tiffany);
+		min-width: toRem(140);
+		border: none;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: var(--accent-hover);
+			}
+		}
+	}
+}
+
+.content {
+	@media (min-width: $mobile) {
+		font-size: toRem(19);
+	}
+	@media (max-width: $mobile) {
+		font-size: toRem(18);
+	}
+	&__container {
+		position: relative;
+		@media (min-width: $tablet) {
+			max-width: toRem(872);
+		}
+	}
+	span,
+	a {
+		color: var(--tiffany);
+	}
+	p {
+		margin-block: toRem(32);
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: var(--white);
+		margin-bottom: toRem(32);
+		&:not(:first-child) {
+			margin-top: toRem(64);
+		}
+	}
+
+	ul,
+	ol {
+		margin-block: toRem(16);
+		padding-left: toRem(26);
+		li {
+			&::marker {
+				color: var(--tiffany);
+			}
+		}
+		& > :not(:last-child) {
+			margin-bottom: toRem(16);
+		}
+	}
+
+	ul {
+		li {
+			list-style: disc;
+		}
+	}
+	ol {
+		ol {
+			list-style: lower-alpha;
+		}
+	}
+}
+.navigation {
+	display: flex;
+	align-items: center;
+	gap: toRem(13);
+	@media (min-width: $mobileSmall) {
+		align-items: center;
+		justify-content: flex-end;
+	}
+
+	// .navigation__buttons
+	&__buttons {
+		display: flex;
+		gap: toRem(24);
+	}
+
+	// .navigation__button
+	&__button {
+		-webkit-tap-highlight-color: transparent;
+		width: toRem(44);
+		height: toRem(44);
+		border-radius: 50%;
+		border: toRem(2) solid var(--gray1);
+		padding: toRem(4);
+		display: grid;
+		flex-shrink: 0;
+		place-items: center;
+		transition: border-color 0.3s ease;
+		& svg {
+			color: var(--tiffany);
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				border-color: var(--tiffany);
+			}
+		}
+		&.swiper-button-disabled {
+			pointer-events: none;
+			& svg {
+				color: var(--gray2);
+			}
+		}
+		// // .navigation__button--prev
+		// &--prev {
+		// }
+		// // .navigation__button--next
+		// &--next {
+		// }
+		// @media (max-width: $mobileSmall) {
+		// 	display: none;
+		// }
+	}
+
+	// .navigation__pagination
+	&__pagination {
+		// @media (min-width: $mobileSmall) {
+		// 	display: none;
+		// }
+		flex: 0 0 auto;
+		color: var(--white);
+		font-family: $fontFamilyLufga;
+		font-size: toRem(20);
+		font-weight: 500;
+		&.swiper-pagination-fraction {
+			width: max-content;
+		}
+	}
+
+	// .navigation__scrollbar
+	&__scrollbar {
+		// @media (min-width: $mobileSmall) {
+		// 	display: none;
+		// }
+		flex: 1 1 auto;
+		position: relative;
+		height: toRem(2);
+		background-color: var(--gray1);
+		position: relative;
+
+		& .swiper-scrollbar-drag {
+			background-color: var(--white);
+		}
+	}
+}
+
+.badge {
+	border-radius: toRem(8);
+	padding: toRem(4) toRem(12);
+	display: grid;
+	place-items: center;
+	max-width: max-content;
+	min-height: toRem(24);
+	background-color: var(--badge-bg1);
+	color: #99e1d9;
+	text-align: center;
+	font-size: toRem(14);
+	font-weight: 500;
+	line-height: 1.14;
+}
+.section {
+	@media (min-width: $mobile) {
+		padding-block: toRem(110);
+	}
+	@media (max-width: $mobile) {
+		padding-block: toRem(100);
+	}
+}
+.section-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: toRem(20);
+
+	&:not(:last-child) {
+		margin-bottom: toRem(32);
+	}
+}
+
+// about
+.content-about {
+	position: relative;
+	display: flex;
+	@media (min-width: $tablet) {
+		padding-inline: toRem(124);
+		gap: toRem(84);
+
+		.about & {
+			padding-right: 0;
+		}
+	}
+	@media (max-width: $tablet) {
+		gap: toRem(32);
+		// flex-wrap: wrap;
+	}
+	@media (max-width: toEm(700)) {
+		flex-direction: column;
+	}
+
+	// .content-about__bg
+	&__bg {
+		position: absolute;
+		z-index: -1;
+		object-fit: contain;
+		@media (min-width: $mobileSmall) {
+			width: toRem(300);
+			height: toRem(402);
+			left: toRem(-132);
+			bottom: toRem(-147);
+		}
+		@media (min-width: $mobile) {
+			width: toRem(568);
+			height: toRem(571);
+			top: toRem(32);
+			left: toRem(-132);
+		}
+		@media (max-width: $mobileSmall) {
+			width: toRem(300);
+			height: toRem(301);
+			left: toRem(-141);
+			bottom: toRem(-164);
+		}
+	}
+	// .content-about__blockquote
+	&__blockquote {
+		flex: 1 1 auto;
+
+		.about & {
+			@media (max-width: toEm(700)) {
+				order: 1;
+			}
+		}
+	}
+	// .content-about__icon
+	&__icon {
+		width: toRem(46);
+		height: toRem(37);
+		color: #2f3c45;
+		&:not(:last-child) {
+			margin-bottom: toRem(24);
+		}
+	}
+	// .content-about__text
+	&__text {
+		font-style: italic;
+		// text-wrap: pretty;
+		@media (min-width: $mobileSmall) {
+			font-size: toRem(28);
+		}
+		@media (min-width: $mobile) {
+			font-size: toRem(32);
+		}
+		@media (max-width: $mobileSmall) {
+			font-size: toRem(26);
+		}
+		&:not(:last-child) {
+			margin-bottom: toRem(40);
+		}
+
+		.about & {
+			max-width: toRem(542);
+			color: var(--white);
+		}
+	}
+	// .content-about__author
+	&__author {
+		flex-shrink: 0;
+		@media (min-width: $mobileSmall) {
+			flex-basis: toRem(300);
+		}
+		@media (min-width: $mobile) {
+			flex-basis: toRem(356);
+		}
+
+		.about & {
+			@media (max-width: toEm(700)) {
+				order: 2;
+			}
+		}
+	}
+
+	//only in about page
+	// .content-about__decor
+	&__decor {
+		position: absolute;
+		z-index: -1;
+		object-fit: contain;
+		@media (min-width: $mobileSmall) {
+			width: toRem(500);
+			height: toRem(502);
+			top: toRem(-224);
+			right: toRem(-235);
+		}
+		@media (min-width: $mobile) {
+			width: toRem(568);
+			height: toRem(571);
+			top: toRem(-251);
+			right: toRem(-162);
+		}
+		@media (max-width: $mobileSmall) {
+			width: toRem(400);
+			height: toRem(401);
+			top: toRem(-181);
+			right: toRem(-170);
+		}
+	}
+	// .content-about__description
+	&__description {
+		@media (min-width: $mobile) {
+			font-size: toRem(19);
+		}
+		@media (max-width: $mobile) {
+			font-size: toRem(18);
+		}
+		.about & {
+			@media (max-width: toEm(700)) {
+				order: 3;
+			}
+		}
+	}
+}
+
+.author {
+	text-align: center;
+	// .author__card
+	&__card {
+		aspect-ratio: 356 / 461;
+		border-bottom: toRem(2) solid var(--tiffany);
+		border-radius: toRem(12);
+		overflow: hidden;
+		// min-height: toRem(461);
+		position: relative;
+		&:not(:last-child) {
+			margin-bottom: toRem(16);
+		}
+	}
+	// .author__image
+	&__image {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		inset: 0;
+		object-fit: cover;
+		border-radius: toRem(12);
+		transform: scale(1.01);
+	}
+	// .author__name
+	&__name {
+		font-family: $fontFamilyLufga;
+		font-weight: 500;
+		font-size: toRem(22);
+		line-height: 1.18;
+		color: var(--white);
+		&:not(:last-child) {
+			margin-bottom: toRem(8);
+		}
+	}
+	// .author__position
+	&__position {
+		margin-inline: auto;
+	}
+}
