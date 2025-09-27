@@ -569,13 +569,15 @@ h2 {
 .header::after {
   content: "";
   position: absolute;
-  background: url(../img/header/decore.svg) 0 0/cover no-repeat;
   top: 0;
   z-index: -1;
   pointer-events: none;
-  height: 18.75rem;
+  height: 12.5rem;
   width: 100%;
-  opacity: .5
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: .8
 }
 .header__container {
   display: flex;
@@ -590,15 +592,18 @@ h2 {
   background-color: var(--black);
   position: relative
 }
-.footer::before {
+.footer::after {
   content: "";
   position: absolute;
-  top: -30.625rem;
-  background: url(../img/footer/decor.svg) center/cover no-repeat;
-  width: 150.75rem;
-  height: 75rem;
+  top: -15.625rem;
   z-index: -1;
-  right: 50%
+  pointer-events: none;
+  height: 15.625rem;
+  width: 100%;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: .8
 }
 .footer__container {
   display: flex;
@@ -669,6 +674,9 @@ h2 {
   flex-direction: column;
   gap: 1.25rem;
   justify-content: space-between
+}
+.item-solution:not(:first-child) {
+  border-left: none
 }
 .item-solution>:not(.item-solution__img) {
   position: relative;
@@ -799,6 +807,115 @@ h2 {
   font-weight: 500;
   color: var(--white)
 }
+.contact__container {
+  position: relative
+}
+.contact__bg {
+  position: absolute;
+  -o-object-fit: contain;
+  object-fit: contain;
+  z-index: -1;
+  max-width: initial;
+  left: 0;
+  aspect-ratio: 1185/653
+}
+.contact__title:not(:last-child) {
+  margin-bottom: 2rem
+}
+.contact__body {
+  display: flex;
+  gap: 5rem
+}
+.contact__info>:not(:last-child) {
+  margin-bottom: .5rem
+}
+.contact__address {
+  font-weight: 500;
+  color: var(--white)
+}
+.contact__links {
+  font-weight: 500;
+  color: var(--tiffany)
+}
+.contact__link {
+  font-size: 1.125rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem
+}
+.contact__link svg {
+  width: 1rem;
+  height: 1rem
+}
+.contact__form {
+  background: radial-gradient(123.1% 129.95% at 91.34% 31.81%,#1c262c 77.13%,#224f4a 100%);
+  border: .125rem solid #222e35;
+  border-radius: .75rem
+}
+.form__wrap>:not(:last-child) {
+  margin-bottom: 1.125rem
+}
+.form__item textarea {
+  min-height: 8.6875rem;
+  resize: none
+}
+.form__label {
+  width: 100%;
+  display: grid;
+  gap: .5rem
+}
+.form__label-text {
+  font-size: .9375rem;
+  text-transform: uppercase;
+  color: var(--gray3-2)
+}
+.form__input {
+  background-color: var(--bg-black);
+  border: .125rem solid #222e35;
+  border-radius: .5rem;
+  padding: .75rem 1.25rem;
+  width: 100%;
+  font-size: 1.125rem;
+  color: var(--white);
+  min-height: 2.9375rem;
+  outline: transparent;
+  transition: all .3s ease
+}
+.form__input::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: inherit;
+  color: var(--gray2)
+}
+.form__input:-ms-input-placeholder {
+  font-family: inherit;
+  font-size: inherit;
+  color: var(--gray2)
+}
+.form__input::-ms-input-placeholder {
+  font-family: inherit;
+  font-size: inherit;
+  color: var(--gray2)
+}
+.form__input::placeholder {
+  font-family: inherit;
+  font-size: inherit;
+  color: var(--gray2)
+}
+.form__input:focus-visible {
+  border-color: var(--tiffany)
+}
+.form__info {
+  font-size: .9375rem;
+  color: var(--white);
+  margin-top: 1.5rem
+}
+.form__info a,
+.form__info span {
+  color: var(--tiffany)
+}
+.form__button {
+  margin-top: 2rem
+}
 .solutions__img {
   position: absolute;
   z-index: -1;
@@ -828,6 +945,7 @@ h2 {
   overflow: hidden;
   background: var(--bg-black);
   border: .125rem solid var(--gray1);
+  border-collapse: collapse;
   display: flex;
   flex-direction: column;
   gap: 8.75rem
@@ -1734,6 +1852,9 @@ button.swiper-pagination-bullet {
     top: -14rem;
     right: -14.6875rem
   }
+  .header::after {
+    background-image: url(../img/header/decore-lg.svg)
+  }
   .header__button {
     max-width: -moz-fit-content;
     max-width: -webkit-fit-content;
@@ -1741,6 +1862,9 @@ button.swiper-pagination-bullet {
   }
   .footer {
     padding-bottom: 5rem
+  }
+  .footer::after {
+    background-image: url(../img/footer/decor-lg.svg)
   }
   .footer__list {
     flex-wrap: wrap;
@@ -1785,6 +1909,21 @@ button.swiper-pagination-bullet {
   }
   .about-us__text {
     font-size: 1.375rem
+  }
+  .contact__bg {
+    width: 62.5rem;
+    top: 100%;
+    -webkit-transform: translateX(-45%);
+    transform: translateX(-45%)
+  }
+  .contact__info {
+    max-width: 26.125rem
+  }
+  .contact__form {
+    padding: 2.5rem 2.5rem 4rem
+  }
+  .form__button {
+    margin-left: auto
   }
   .solutions__img {
     width: 25rem;
@@ -1893,6 +2032,9 @@ button.swiper-pagination-bullet {
   .content-about__description {
     font-size: 1.1875rem
   }
+  .header::after {
+    background-image: url(../img/header/decore.svg)
+  }
   .header__container {
     min-height: 9.375rem;
     padding-block: .375rem
@@ -1901,9 +2043,8 @@ button.swiper-pagination-bullet {
     width: 9.5rem;
     height: 2.125rem
   }
-  .footer::before {
-    -webkit-transform: translateX(40%) rotate(3deg);
-    transform: translateX(40%) rotate(3deg)
+  .footer::after {
+    background-image: url(../img/footer/decor.svg)
   }
   .footer__top {
     justify-content: space-between
@@ -1925,6 +2066,24 @@ button.swiper-pagination-bullet {
   }
   .case-item__content {
     padding-inline: 1rem
+  }
+  .contact {
+    padding-bottom: 13.75rem
+  }
+  .contact__bg {
+    width: 74.0625rem;
+    top: 90%;
+    -webkit-transform: translateX(-30%);
+    transform: translateX(-30%)
+  }
+  .contact__address {
+    font-size: 1.375rem
+  }
+  .contact__links>:not(:last-child) {
+    margin-bottom: 3rem
+  }
+  .contact__link--lg {
+    font-size: 1.375rem
   }
   .solutions__img {
     width: 27.6875rem;
@@ -2035,6 +2194,12 @@ button.swiper-pagination-bullet {
   }
   .about-us__header {
     padding-inline: 19.375rem 3.875rem
+  }
+  .contact__body {
+    justify-content: space-between
+  }
+  .contact__form {
+    max-width: 33.875rem
   }
   .solutions__list {
     grid-template-columns: repeat(3,1fr)
@@ -2153,9 +2318,8 @@ button.swiper-pagination-bullet {
     justify-content: space-between;
     padding-block: 1.5rem
   }
-  .footer::before {
-    -webkit-transform: translateX(57%) rotate(3deg);
-    transform: translateX(57%) rotate(3deg)
+  .contact__body {
+    flex-direction: column
   }
 }
 @media (max-width:61.99875em)and (max-width:29.99875em) {
@@ -2213,6 +2377,18 @@ button.swiper-pagination-bullet {
   }
   .case-item__content {
     padding-inline: .5rem
+  }
+  .contact {
+    padding-bottom: 12.5rem
+  }
+  .contact__address {
+    font-size: 1.25rem
+  }
+  .contact__links>:not(:last-child) {
+    margin-bottom: 2rem
+  }
+  .contact__link--lg {
+    font-size: 1.25rem
   }
   .solutions__description {
     font-size: 1.375rem
@@ -2319,8 +2495,14 @@ button.swiper-pagination-bullet {
     top: -11.3125rem;
     right: -10.625rem
   }
+  .header::after {
+    background-image: url(../img/header/decore-mob.svg)
+  }
   .footer {
     padding-bottom: 2.5rem
+  }
+  .footer::after {
+    background-image: url(../img/footer/decor-mob.svg)
   }
   .footer__list {
     flex-direction: column
@@ -2379,6 +2561,18 @@ button.swiper-pagination-bullet {
   }
   .about-us__text {
     font-size: 1.25rem
+  }
+  .contact__bg {
+    width: 43.75rem;
+    top: calc(100% + 3.625rem);
+    -webkit-transform: translateX(-55%);
+    transform: translateX(-55%)
+  }
+  .contact__form {
+    padding: 2rem 1rem 4rem
+  }
+  .form__button {
+    width: 100%
   }
   .solutions__img {
     width: 25rem;
@@ -2548,6 +2742,12 @@ button.swiper-pagination-bullet {
   .item-solution:hover .item-solution__title {
     -webkit-transform: translateY(-1.25rem);
     transform: translateY(-1.25rem)
+  }
+  .form__input:hover {
+    border-color: var(--gray2)
+  }
+  .form__input:hover:focus-visible {
+    border-color: var(--tiffany)
   }
   .solution-item:hover .solution-item__img {
     height: 45%;

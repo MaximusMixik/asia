@@ -19,25 +19,24 @@
 	&::after {
 		content: "";
 		position: absolute;
-		background: url(../img/header/decore.svg) 0 0 / cover no-repeat;
 		top: 0;
 		z-index: -1;
 		pointer-events: none;
-		height: toRem(300);
+		height: toRem(200);
 		width: 100%;
-		opacity: 0.5;
-		// @media (min-width: $mobile) {
-		// 	// width: 90%;
-		// 	// left: -5%;
-		// 	// height: toRem(300);
-		// }
-		// @media (max-width: $mobile) {
-		// 	// width: 140%;
-		// 	// left: 0;
-		// }
-		// @media (max-width: $mobileSmall) {
-		// 	background: url(../img/header/decore-mob.svg) 0 0 / contain no-repeat;
-		// }
+		background-position: top right;
+		background-repeat: no-repeat;
+		background-size: cover;
+		@media (min-width: $mobileSmall) {
+			background-image: url(../img/header/decore-lg.svg);
+		}
+		@media (min-width: $mobile) {
+			background-image: url(../img/header/decore.svg);
+		}
+		@media (max-width: $mobileSmall) {
+			background-image: url(../img/header/decore-mob.svg);
+		}
+		opacity: 0.8;
 	}
 	// .header__container
 	&__container {

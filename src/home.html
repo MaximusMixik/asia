@@ -336,7 +336,83 @@
 				</div>
 			</section>
 
+			<section class="contact section" aria-labelledby="contact">
+				<div class="contact__container">
 
+					<img class="contact__bg" src="@img/home/contact/shine.svg" alt="background">
+					<h2 class="contact__title title-2" id="contact">
+						Contact Us
+					</h2>
+					<div class="contact__body">
+						<div class="contact__info ">
+							<div class="contact__address">
+								One Orchard Road, Eastwood Cybercity, Quezon City 1100 Philippines
+							</div>
+							<div class="contact__links">
+								<a href="#" target="_blank" class="contact__link">
+									<span>check on map</span>
+									<svg>
+										<use xlink:href="@img/icons/icons.svg#link"></use>
+									</svg>
+								</a>
+								<a href="mailto:admin@cs-asiapac.com" target="_blank" class="contact__link contact__link--lg ">
+									<span>admin@cs-asiapac.com</span>
+									<svg>
+										<use xlink:href="@img/icons/icons.svg#link"></use>
+									</svg>
+								</a>
+							</div>
+
+						</div>
+						<!-- action="" -->
+						<form class="contact__form form">
+							<div class="form__wrap">
+								<div class="form__item">
+									<label class="form__label">
+										<span class="form__label-text">
+											NAME
+										</span>
+										<input type="text" name="username" autocomplete="additional-name" required class="form__input" placeholder="Placeholder text...">
+									</label>
+								</div>
+								<div class="form__item">
+									<label class="form__label">
+										<span class="form__label-text">
+											EMAIL
+										</span>
+										<input type="text" name="email" autocomplete="email" required class="form__input" placeholder="Placeholder text...">
+									</label>
+								</div>
+								<div class="form__item">
+									<label class="form__label">
+										<span class="form__label-text">
+											Contact Number
+										</span>
+										<input type="tel" name="phone" autocomplete="tel" required class="form__input" placeholder="+112568997">
+									</label>
+								</div>
+								<div class="form__item">
+									<label class="form__label">
+										<span class="form__label-text">
+											Message
+										</span>
+										<textarea name="textarea" class="form__input" placeholder="Placeholder text..."></textarea>
+									</label>
+								</div>
+							</div>
+							<p class="form__info">
+								You agree that your data will be used to process your request. Further information can be found in the
+								<a href="policy.html" target="_blank">Privacy Policy</a>
+								page.
+							</p>
+							<button class="form__button button button--accent">
+								Send
+							</button>
+						</form>
+					</div>
+
+				</div>
+			</section>
 
 		</main>
 		@@include('html/_footer.htm',{})

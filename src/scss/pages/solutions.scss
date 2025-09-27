@@ -94,7 +94,7 @@
 
 	background: var(--bg-black);
 	border: toRem(2) solid var(--gray1);
-
+	border-collapse: collapse;
 	display: flex;
 	flex-direction: column;
 	gap: toRem(140);

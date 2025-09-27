@@ -10,24 +10,43 @@
 	}
 
 	// TODO change
-	&::before {
+	// &::before {
+	// 	top: toRem(-490);
+	// 	background: url("../img/footer/decor.svg") center / cover no-repeat;
+	// 	width: toRem(2412);
+	// 	// height: toRem(1163);
+	// 	height: toRem(1200);
+	// 	right: 50%;
+
+	// 	@media (min-width: $mobile) {
+	// 		// transform: rotate(3deg);
+	// 		transform: translateX(40%) rotate(3deg);
+	// 	}
+	// 	@media (max-width: $tablet) {
+	// 		transform: translateX(57%) rotate(3deg);
+	// 	}
+	// }
+	&::after {
 		content: "";
 		position: absolute;
-		top: toRem(-490);
-		background: url("../img/footer/decor.svg") center / cover no-repeat;
-		width: toRem(2412);
-		// height: toRem(1163);
-		height: toRem(1200);
+		top: toRem(-250);
 		z-index: -1;
-		right: 50%;
-
+		pointer-events: none;
+		height: toRem(250);
+		width: 100%;
+		background-position: bottom right;
+		background-repeat: no-repeat;
+		background-size: cover;
+		@media (min-width: $mobileSmall) {
+			background-image: url(../img/footer/decor-lg.svg);
+		}
 		@media (min-width: $mobile) {
-			// transform: rotate(3deg);
-			transform: translateX(40%) rotate(3deg);
+			background-image: url("../img/footer/decor.svg");
 		}
-		@media (max-width: $tablet) {
-			transform: translateX(57%) rotate(3deg);
+		@media (max-width: $mobileSmall) {
+			background-image: url(../img/footer/decor-mob.svg);
 		}
+		opacity: 0.8;
 	}
 	// .footer__container
 	&__container {

@@ -30,6 +30,16 @@ function borderRadiusFunction() {
 
 			// console.log(currentRow, currentCol)
 
+			// убираем правую границу, если НЕ последняя колонка
+			if (currentCol !== columns) {
+				item.style.borderRight = 'none';
+			}
+
+			// убираем нижнюю границу, если НЕ последний ряд
+			if (currentRow !== rows) {
+				item.style.borderBottom = 'none';
+			}
+
 
 			// Первый элемент (верхний левый)
 			if (index === 0) {
