@@ -45,6 +45,7 @@
   --blue: #0c43c4;
   --white: #fff;
   --tiffany: #99e1d9;
+  --tiffanyHover: #79d1c7;
   --gray2: #5d6f7a;
   --black: #071117;
   --red: #f8333c;
@@ -206,6 +207,82 @@ body::before {
 .icon-menu {
   display: none
 }
+body::after {
+  content: "";
+  background-color: rgba(0,0,0,.5);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity .8s ease 0s;
+  pointer-events: none;
+  z-index: 149
+}
+.popup-show body::after {
+  opacity: 1
+}
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 1.875rem 1rem;
+  transition: visibility .8s ease 0s;
+  visibility: hidden;
+  pointer-events: none
+}
+.popup.popup_show {
+  z-index: 150;
+  visibility: visible;
+  overflow: auto;
+  pointer-events: auto
+}
+.popup__wrapper {
+  flex-direction: column;
+  min-height: 100%;
+  flex: 1 1 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.popup__content {
+  visibility: hidden;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  transition: -webkit-transform .3s ease 0s;
+  transition: transform .3s ease 0s;
+  transition: transform .3s ease 0s,-webkit-transform .3s ease 0s;
+  width: 100%;
+  box-shadow: 0 .625rem 2.625rem 0 rgba(0,0,0,.4);
+  background: radial-gradient(123.1% 129.95% at 91.34% 31.81%,#1c262c 77.13%,#224f4a 100%);
+  border: .125rem solid #222e35;
+  border-radius: .75rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+.lock .popup__content {
+  visibility: visible
+}
+.popup_show .popup__content {
+  visibility: visible;
+  -webkit-transform: scale(1);
+  transform: scale(1)
+}
+.popup__title {
+  font-size: 2.375rem
+}
+.popup__title:not(:last-child) {
+  margin-bottom: .5rem
+}
+.popup__text:not(:last-child) {
+  margin-bottom: 1.5rem
+}
 .ibg {
   width: 100%;
   height: 100%;
@@ -310,7 +387,8 @@ h2 {
   border-radius: 3.125rem;
   padding: .5rem 1.25rem;
   min-height: 2.75rem;
-  cursor: pointer
+  cursor: pointer;
+  transition: all .3s ease
 }
 .button svg {
   width: 1.5rem;
@@ -336,29 +414,7 @@ h2 {
 .button--accent-border {
   border: .125rem solid var(--tiffany)
 }
-.button--arrow {
-  width: 2.75rem;
-  height: 2.75rem;
-  position: relative;
-  border-color: #2f776f
-}
-.button--arrow span {
-  opacity: 0;
-  width: 0;
-  transition: width .4s ease,opacity .1s ease
-}
-.button--arrow svg {
-  position: absolute;
-  -o-object-fit: contain;
-  object-fit: contain;
-  right: .25rem;
-  transition: all .4s ease
-}
-.button--arrow svg path {
-  transition: fill .4s ease
-}
-.button--accent,
-.button--blue {
+.button--accent {
   color: var(--black);
   padding: .75rem 1.25rem;
   background-color: var(--tiffany);
@@ -1807,6 +1863,10 @@ button.swiper-pagination-bullet {
   overflow: hidden
 }
 @media (min-width:29.99875em) {
+  .popup__content {
+    padding: 4rem 3.25rem;
+    width: 31.25rem
+  }
   .page__decor-top {
     width: 31.25rem;
     height: 31.25rem;
@@ -1998,6 +2058,9 @@ button.swiper-pagination-bullet {
 @media (min-width:48.06125em) {
   html {
     scroll-padding-top: 7.5rem
+  }
+  .popup__text {
+    font-size: 1.1875rem
   }
   .page__section {
     padding-block: 6.875rem 17.5rem
@@ -2355,6 +2418,9 @@ button.swiper-pagination-bullet {
   html {
     scroll-padding-top: 4.375rem
   }
+  .popup__text {
+    font-size: 1.125rem
+  }
   .content {
     font-size: 1.125rem
   }
@@ -2456,6 +2522,13 @@ button.swiper-pagination-bullet {
 @media (max-width:29.99875em) {
   [class*=__container] {
     padding-inline: 1rem
+  }
+  .popup__content {
+    padding: 2.5rem 1.5rem;
+    width: 20.5rem
+  }
+  .popup__button {
+    width: 100%
   }
   .page__decor-top {
     width: 18.75rem;
@@ -2684,37 +2757,14 @@ button.swiper-pagination-bullet {
   .menu__link:hover {
     color: var(--tiffany)
   }
-  .button {
-    transition: width .3s ease,border-color .3s ease
-  }
-  .button:hover {
-    border-color: var(--accent)
-  }
   .button--border:hover {
     border-color: var(--tiffany)
   }
   .button--accent-border:hover {
     border-color: var(--tiffany)
   }
-  .button--arrow:hover,
-  .item-preview:hover .button--arrow {
-    border-color: var(--accent);
-    width: 6.5rem
-  }
-  .button--arrow:hover span,
-  .item-preview:hover .button--arrow span {
-    width: 3.75rem;
-    padding-right: 1.6875rem;
-    opacity: 1;
-    transition: width .4s ease,opacity .3s ease
-  }
-  .button--arrow:hover svg path,
-  .item-preview:hover .button--arrow svg path {
-    fill: var(--white)
-  }
-  .button--accent:hover,
-  .button--blue:hover {
-    background-color: var(--accent-hover)
+  .button--accent:hover {
+    background-color: var(--tiffanyHover)
   }
   .navigation__button:hover {
     border-color: var(--tiffany)

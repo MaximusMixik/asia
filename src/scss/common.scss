@@ -145,27 +145,18 @@ h6 {
 	font-family: $fontFamilyLufga;
 	font-size: toRem(15);
 	font-weight: 500;
-	// line-height: 1.2;
 	line-height: 1;
 	border-radius: toRem(50);
-	// padding: toRem(12) toRem(20);
 	padding: toRem(8) toRem(20);
 	min-height: toRem(44);
 	cursor: pointer;
 
+	transition: all 0.3s ease;
 	& svg {
 		width: toRem(24);
 		height: toRem(24);
 		object-fit: contain;
 		flex-shrink: 0;
-	}
-	@media (any-hover: hover) {
-		transition:
-			width 0.3s ease,
-			border-color 0.3s ease;
-		&:hover {
-			border-color: var(--accent);
-		}
 	}
 	&--link {
 		color: var(--tiffany);
@@ -196,60 +187,8 @@ h6 {
 			}
 		}
 	}
-	// .button--arrow
-	&--arrow {
-		width: toRem(44);
-		height: toRem(44);
-		position: relative;
-		border-color: #2f776f;
-		// transition: width 0.3s ease !important;
 
-		& span {
-			// overflow: hidden;
-			opacity: 0;
-			width: 0;
-			transition:
-				width 0.4s ease,
-				opacity 0.1s ease;
-		}
-		& svg {
-			position: absolute;
-			object-fit: contain;
-			right: toRem(4);
-			transition: all 0.4s ease;
-			& path {
-				transition: fill 0.4s ease;
-			}
-		}
-		@media (any-hover: hover) {
-			.item-preview:hover &,
-			&:hover {
-				border-color: var(--accent);
-				width: toRem(104);
-				// width: max-content;
-				& span {
-					// width: max-content;
-					// padding-right: toRem(46);
-					width: toRem(60);
-					padding-right: toRem(27);
-					opacity: 1;
-					transition:
-						width 0.4s ease,
-						opacity 0.3s ease;
-					// transition: all 0.3s ease;
-				}
-				& svg {
-					& path {
-						fill: var(--white);
-					}
-				}
-			}
-		}
-	}
-	//
-	// .button--blue
-	&--accent,
-	&--blue {
+	&--accent {
 		color: var(--black);
 		padding: toRem(12) toRem(20);
 		background-color: var(--tiffany);
@@ -257,7 +196,8 @@ h6 {
 		border: none;
 		@media (any-hover: hover) {
 			&:hover {
-				background-color: var(--accent-hover);
+				// background-color: var(--accent-hover);
+				background-color: var(--tiffanyHover);
 			}
 		}
 	}
