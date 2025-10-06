@@ -56,17 +56,6 @@
 	// .full__title
 	&__title {
 		color: var(--white);
-		font-weight: 500;
-		font-family: $fontFamilyLufga;
-		@media (min-width: $mobileSmall) {
-			font-size: toRem(36);
-		}
-		@media (min-width: $mobile) {
-			font-size: toRem(38);
-		}
-		@media (max-width: $mobile) {
-			font-size: toRem(28);
-		}
 		&:not(:last-child) {
 			margin-bottom: toRem(8);
 		}

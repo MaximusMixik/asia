@@ -88,6 +88,7 @@
 	}
 }
 
+
 .solution-item {
 	position: relative;
 	overflow: hidden;
@@ -101,7 +102,7 @@
 
 	@media (min-width: $mobileSmall) {
 		min-height: toRem(680);
-		padding: toRem(40) toRem(32) toRem(78);
+		padding: toRem(32) toRem(32) toRem(78);
 	}
 	@media (min-width: $mobile) {
 		min-height: toRem(640);
@@ -119,6 +120,8 @@
 			}
 			.solution-item__icon {
 				transform: translateX(toRem(8));
+				box-shadow: toRem(6) 0 toRem(8) 0 rgba(248, 51, 60, 0.7);
+				background-color: var(--bg-black);
 			}
 			.solution-item__content {
 				transform: translateY(toRem(-20));
@@ -153,7 +156,7 @@
 		place-items: center;
 		width: toRem(52);
 		height: toRem(52);
-		transition: transform 0.5s ease;
+		transition: all 0.5s ease;
 
 		& svg {
 			width: toRem(32);

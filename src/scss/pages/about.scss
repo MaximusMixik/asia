@@ -39,11 +39,17 @@
 	// .about__info
 	&__info {
 		position: relative;
-		font-size: toRem(19);
+		@media (min-width: $mobile) {
+			font-size: toRem(19);
+		}
+		@media (max-width: $mobile) {
+			font-size: toRem(18);
+		}
 
 		& > :first-child {
 			font-weight: 500;
 			color: var(--white);
+			font-family: $fontFamilyLufga;
 			@media (min-width: $mobile) {
 				font-size: toRem(24);
 			}

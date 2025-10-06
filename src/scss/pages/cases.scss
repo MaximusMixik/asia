@@ -53,8 +53,6 @@
 		}
 	}
 
-
-
 	// .cases__pagging
 	&__pagging {
 		margin-top: toRem(120);
@@ -72,10 +70,11 @@
 			min-width: toRem(44);
 			min-height: toRem(44);
 			padding: toRem(8);
-			display: grid;
-			place-items: center;
+			line-height: 1;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			border-radius: 50%;
-
 			font-family: $fontFamilyLufga;
 			font-weight: 500;
 			font-size: toRem(18);
@@ -85,12 +84,12 @@
 		& a {
 			border: toRem(2) solid var(--gray1);
 			color: var(--tiffany);
-			// @media (any-hover: hover) {
-			// 	transition: all 0.3s ease;
-			// 	&:hover {
-			// 		border: toRem(2) solid #ead7a4;
-			// 	}
-			// }
+			@media (any-hover: hover) {
+				transition: border-color 0.3s ease;
+				&:hover {
+					border-color: var(--tiffany);
+				}
+			}
 		}
 
 		& span {

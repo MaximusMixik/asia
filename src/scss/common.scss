@@ -101,7 +101,16 @@ h2,
 }
 .title-3,
 h3 {
-	@include adaptiveValue("font-size", 38, 28);
+	// @include adaptiveValue("font-size", 38, 28);
+	@media (min-width: $mobileSmall) {
+		font-size: toRem(36);
+	}
+	@media (min-width: $tablet) {
+		font-size: toRem(38);
+	}
+	@media (max-width: $mobileSmall) {
+		font-size: toRem(28);
+	}
 }
 
 .title-4,
@@ -246,18 +255,17 @@ h6 {
 			}
 		}
 	}
-	//
-	// .button--blue
-	&--accent,
-	&--blue {
+	&--accent {
 		color: var(--black);
 		padding: toRem(12) toRem(20);
 		background-color: var(--tiffany);
 		min-width: toRem(140);
+		line-height: 1;
 		border: none;
 		@media (any-hover: hover) {
+			transition: background-color 0.3s ease;
 			&:hover {
-				background-color: var(--accent-hover);
+				background-color: var(--tiffanyHover);
 			}
 		}
 	}
@@ -294,6 +302,22 @@ h6 {
 		margin-bottom: toRem(32);
 		&:not(:first-child) {
 			margin-top: toRem(64);
+		}
+	}
+
+	h1 {
+		background: linear-gradient(57deg, #fff 30%, #92a4af 100%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+
+		& span {
+			display: block;
+			background: linear-gradient(47deg, #99e1d9 0%, #3b736d 100%);
+			max-width: max-content;
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
 		}
 	}
 
@@ -350,6 +374,9 @@ h6 {
 		place-items: center;
 		transition: border-color 0.3s ease;
 		& svg {
+			width: toRem(24);
+			height: toRem(24);
+			flex-shrink: 0;
 			color: var(--tiffany);
 		}
 

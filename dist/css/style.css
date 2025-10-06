@@ -45,6 +45,7 @@
   --blue: #0c43c4;
   --white: #fff;
   --tiffany: #99e1d9;
+  --tiffanyHover: #80d2c9;
   --gray2: #5d6f7a;
   --black: #071117;
   --red: #f8333c;
@@ -102,6 +103,10 @@ button,
 option,
 select {
   cursor: pointer
+}
+a,
+button {
+  -webkit-tap-highlight-color: transparent
 }
 a {
   display: inline-block;
@@ -188,7 +193,8 @@ body::before {
   grid-column: 3/4
 }
 .menu__list {
-  display: flex
+  display: flex;
+  color: var(--white)
 }
 .menu__link {
   font-family: Lufga;
@@ -357,12 +363,12 @@ h2 {
 .button--arrow svg path {
   transition: fill .4s ease
 }
-.button--accent,
-.button--blue {
+.button--accent {
   color: var(--black);
   padding: .75rem 1.25rem;
   background-color: var(--tiffany);
   min-width: 8.75rem;
+  line-height: 1;
   border: none
 }
 .content__container {
@@ -391,6 +397,21 @@ h2 {
 .content h5:not(:first-child),
 .content h6:not(:first-child) {
   margin-top: 4rem
+}
+.content h1 {
+  background: linear-gradient(57deg,#fff 30%,#92a4af 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent
+}
+.content h1 span {
+  display: block;
+  background: linear-gradient(47deg,#99e1d9 0,#3b736d 100%);
+  max-width: -webkit-max-content;
+  max-width: max-content;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent
 }
 .content ol,
 .content ul {
@@ -433,6 +454,9 @@ h2 {
   transition: border-color .3s ease
 }
 .navigation__button svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
   color: var(--tiffany)
 }
 .navigation__button.swiper-button-disabled {
@@ -620,6 +644,7 @@ h2 {
   align-items: center;
   gap: 1.5rem;
   font-family: Lufga;
+  color: var(--white);
   font-size: 1.125rem
 }
 .footer__bottom {
@@ -705,9 +730,7 @@ h2 {
   place-items: center;
   width: 3.25rem;
   height: 3.25rem;
-  transition: -webkit-transform .5s ease;
-  transition: transform .5s ease;
-  transition: transform .5s ease,-webkit-transform .5s ease
+  transition: all .5s ease
 }
 .item-solution__icon svg {
   width: 2rem;
@@ -741,6 +764,9 @@ h2 {
 .last-cases__navigation:not(:has(.swiper-button-lock)) {
   margin-top: 2rem
 }
+.case-item {
+  position: relative
+}
 .case-item__image {
   border-radius: .75rem;
   overflow: hidden;
@@ -760,7 +786,15 @@ h2 {
 .case-item__image:not(:last-child) {
   margin-bottom: 1rem
 }
+.case-item__link-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  z-index: 3
+}
 .case-item__title {
+  color: var(--white);
   font-family: Lufga;
   font-size: 1.375rem;
   font-weight: 500;
@@ -848,7 +882,7 @@ h2 {
   height: 1rem
 }
 .contact__form {
-  background: radial-gradient(123.1% 129.95% at 91.34% 31.81%,#1c262c 77.13%,#224f4a 100%);
+  background: radial-gradient(123.1% 129.95% at 99.34% 31.81%,#1c262c 77.13%,#224f4a 100%);
   border: .125rem solid #222e35;
   border-radius: .75rem
 }
@@ -977,9 +1011,7 @@ h2 {
   place-items: center;
   width: 3.25rem;
   height: 3.25rem;
-  transition: -webkit-transform .5s ease;
-  transition: transform .5s ease;
-  transition: transform .5s ease,-webkit-transform .5s ease
+  transition: all .5s ease
 }
 .solution-item__icon svg {
   width: 2rem;
@@ -1054,6 +1086,15 @@ h2 {
 .content-article__row {
   display: grid
 }
+.content-article__row:nth-child(1) .content-article__caption {
+  margin-top: .125rem
+}
+.content-article__row:nth-child(2) .content-article__caption {
+  margin-top: .3125rem
+}
+.content-article__row:nth-child(n+3) .content-article__caption {
+  margin-top: .1875rem
+}
 .content-article__caption {
   font-family: Lufga;
   font-weight: 500;
@@ -1082,12 +1123,12 @@ h2 {
   object-fit: contain
 }
 .about__info {
-  position: relative;
-  font-size: 1.1875rem
+  position: relative
 }
 .about__info>:first-child {
   font-weight: 500;
-  color: var(--white)
+  color: var(--white);
+  font-family: Lufga
 }
 .about__info>:first-child:not(:last-child) {
   margin-bottom: 2.5rem
@@ -1121,8 +1162,10 @@ h2 {
   min-width: 2.75rem;
   min-height: 2.75rem;
   padding: .5rem;
-  display: grid;
-  place-items: center;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
   font-family: Lufga;
   font-weight: 500;
@@ -1156,9 +1199,7 @@ h2 {
   margin-bottom: 5rem
 }
 .full__title {
-  color: var(--white);
-  font-weight: 500;
-  font-family: Lufga
+  color: var(--white)
 }
 .full__title:not(:last-child) {
   margin-bottom: .5rem
@@ -1818,6 +1859,10 @@ button.swiper-pagination-bullet {
   .page__header:not(:last-child) {
     margin-bottom: 12.5rem
   }
+  .title-3,
+  h3 {
+    font-size: 2.25rem
+  }
   .title-4,
   h4 {
     font-size: 2rem
@@ -1859,9 +1904,6 @@ button.swiper-pagination-bullet {
     max-width: -moz-fit-content;
     max-width: -webkit-fit-content;
     max-width: fit-content
-  }
-  .footer {
-    padding-bottom: 5rem
   }
   .footer::after {
     background-image: url(../img/footer/decor-lg.svg)
@@ -1936,7 +1978,7 @@ button.swiper-pagination-bullet {
   }
   .solution-item {
     min-height: 42.5rem;
-    padding: 2.5rem 2rem 4.875rem
+    padding: 2rem 2rem 4.875rem
   }
   .article__action,
   .article__header {
@@ -1977,9 +2019,6 @@ button.swiper-pagination-bullet {
   .cases__list {
     grid-template-columns: repeat(2,1fr);
     gap: 2.5rem 1rem
-  }
-  .full__title {
-    font-size: 2.25rem
   }
   .full__button {
     max-width: -webkit-max-content;
@@ -2042,6 +2081,9 @@ button.swiper-pagination-bullet {
   .header__logo {
     width: 9.5rem;
     height: 2.125rem
+  }
+  .footer {
+    padding-bottom: 5rem
   }
   .footer::after {
     background-image: url(../img/footer/decor.svg)
@@ -2123,6 +2165,9 @@ button.swiper-pagination-bullet {
     left: 34.5625rem;
     top: -6.875rem
   }
+  .about__info {
+    font-size: 1.1875rem
+  }
   .about__info>:first-child {
     font-size: 1.5rem
   }
@@ -2140,9 +2185,6 @@ button.swiper-pagination-bullet {
   }
   .full__decor {
     display: none
-  }
-  .full__title {
-    font-size: 2.375rem
   }
   .full__text {
     font-size: 1.1875rem
@@ -2168,6 +2210,10 @@ button.swiper-pagination-bullet {
   .title-2,
   h2 {
     font-size: 3.0625rem
+  }
+  .title-3,
+  h3 {
+    font-size: 2.375rem
   }
   .content__container {
     max-width: 54.5rem
@@ -2216,10 +2262,6 @@ button.swiper-pagination-bullet {
   }
 }
 @media (min-width:80.5em) {
-  .title-3,
-  h3 {
-    font-size: 2.375rem
-  }
   .header__container {
     gap: 13.75rem
   }
@@ -2368,6 +2410,9 @@ button.swiper-pagination-bullet {
     width: 7.8125rem;
     height: 1.75rem
   }
+  .footer {
+    padding-bottom: 2.5rem
+  }
   .footer__top {
     flex-direction: column
   }
@@ -2409,6 +2454,9 @@ button.swiper-pagination-bullet {
   .content-article__text {
     font-size: 1.125rem
   }
+  .about__info {
+    font-size: 1.125rem
+  }
   .about__info>:first-child {
     font-size: 1.375rem
   }
@@ -2425,9 +2473,6 @@ button.swiper-pagination-bullet {
     height: 31.25rem;
     left: -21.875rem;
     top: 4.9375rem
-  }
-  .full__title {
-    font-size: 1.75rem
   }
   .full__text {
     font-size: 1.125rem
@@ -2468,6 +2513,10 @@ button.swiper-pagination-bullet {
   .page__header:not(:last-child) {
     margin-bottom: 18.125rem
   }
+  .title-3,
+  h3 {
+    font-size: 1.75rem
+  }
   .title-4,
   h4 {
     font-size: 1.5rem
@@ -2497,9 +2546,6 @@ button.swiper-pagination-bullet {
   }
   .header::after {
     background-image: url(../img/header/decore-mob.svg)
-  }
-  .footer {
-    padding-bottom: 2.5rem
   }
   .footer::after {
     background-image: url(../img/footer/decor-mob.svg)
@@ -2617,10 +2663,6 @@ button.swiper-pagination-bullet {
   }
 }
 @media (max-width:22.5em) {
-  .title-3,
-  h3 {
-    font-size: 1.75rem
-  }
   .hero__image {
     width: 25rem
   }
@@ -2657,11 +2699,12 @@ button.swiper-pagination-bullet {
     font-size: clamp(2rem ,1.1355945373rem + 3.1079746974vw ,3.0625rem)
   }
 }
-@media (min-width:22.5em)and (max-width:80.5em) {
-  .title-3,
-  h3 {
-    font-size: clamp(1.75rem ,1.5075431034rem + 1.0775862069vw ,2.375rem)
+@media (min-width:61.99875em)and (max-width:80.5em) {
+  .header__container {
+    gap: clamp(2.5rem ,-35.1993953111rem + 60.8067022498vw ,13.75rem)
   }
+}
+@media (min-width:22.5em)and (max-width:80.5em) {
   .hero__image {
     width: clamp(25rem ,17.2171336207rem + 34.5905172414vw ,45.0625rem)
   }
@@ -2673,11 +2716,6 @@ button.swiper-pagination-bullet {
   }
   .full__image {
     height: clamp(7.375rem ,3.3017241379rem + 18.1034482759vw ,17.875rem)
-  }
-}
-@media (min-width:61.99875em)and (max-width:80.5em) {
-  .header__container {
-    gap: clamp(2.5rem ,-35.1993953111rem + 60.8067022498vw ,13.75rem)
   }
 }
 @media (any-hover:hover) {
@@ -2712,9 +2750,11 @@ button.swiper-pagination-bullet {
   .item-preview:hover .button--arrow svg path {
     fill: var(--white)
   }
-  .button--accent:hover,
-  .button--blue:hover {
-    background-color: var(--accent-hover)
+  .button--accent {
+    transition: background-color .3s ease
+  }
+  .button--accent:hover {
+    background-color: var(--tiffanyHover)
   }
   .navigation__button:hover {
     border-color: var(--tiffany)
@@ -2737,7 +2777,9 @@ button.swiper-pagination-bullet {
   }
   .item-solution:hover .item-solution__icon {
     -webkit-transform: translateX(.625rem);
-    transform: translateX(.625rem)
+    transform: translateX(.625rem);
+    box-shadow: .375rem 0 .5rem 0 rgba(248,51,60,.7);
+    background-color: var(--bg-black)
   }
   .item-solution:hover .item-solution__title {
     -webkit-transform: translateY(-1.25rem);
@@ -2755,10 +2797,18 @@ button.swiper-pagination-bullet {
   }
   .solution-item:hover .solution-item__icon {
     -webkit-transform: translateX(.5rem);
-    transform: translateX(.5rem)
+    transform: translateX(.5rem);
+    box-shadow: .375rem 0 .5rem 0 rgba(248,51,60,.7);
+    background-color: var(--bg-black)
   }
   .solution-item:hover .solution-item__content {
     -webkit-transform: translateY(-1.25rem);
     transform: translateY(-1.25rem)
+  }
+  .custom-pagination__list a {
+    transition: border-color .3s ease
+  }
+  .custom-pagination__list a:hover {
+    border-color: var(--tiffany)
   }
 }
