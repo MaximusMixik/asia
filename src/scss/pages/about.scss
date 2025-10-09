@@ -13,9 +13,11 @@
 	}
 	// .about__img
 	&__img {
+		// about__img571 × 387 px
 		position: absolute;
 		z-index: -1;
 		object-fit: contain;
+		transform: scale(1.5);
 		@media (min-width: $mobileSmall) {
 			width: toRem(320);
 			height: toRem(308);
