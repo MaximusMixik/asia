@@ -123,6 +123,21 @@
 		@media (max-width: $mobile) {
 			gap: toRem(8) toRem(28);
 		}
+		&:nth-child(1) {
+			.content-article__caption {
+				margin-top: toRem(2);
+			}
+		}
+		&:nth-child(2) {
+			.content-article__caption {
+				margin-top: toRem(5);
+			}
+		}
+		&:nth-child(n + 3) {
+			.content-article__caption {
+				margin-top: toRem(3);
+			}
+		}
 	}
 	// .content-article__caption
 	&__caption {

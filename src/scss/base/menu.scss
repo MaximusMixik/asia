@@ -60,6 +60,7 @@
 	// .menu__list
 	&__list {
 		display: flex;
+		color: var(--white);
 		@media (min-width: $tablet) {
 			align-items: center;
 			flex-wrap: wrap;

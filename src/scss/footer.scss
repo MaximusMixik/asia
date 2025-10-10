@@ -2,10 +2,10 @@
 	padding-top: toRem(80);
 	background-color: var(--black);
 	position: relative;
-	@media (min-width: $mobileSmall) {
+	@media (min-width: $mobile) {
 		padding-bottom: toRem(80);
 	}
-	@media (max-width: $mobileSmall) {
+	@media (max-width: $mobile) {
 		padding-bottom: toRem(40);
 	}
 
@@ -87,6 +87,7 @@
 		align-items: center;
 		gap: toRem(24);
 		font-family: $fontFamilyLufga;
+		color: var(--white);
 		font-size: toRem(18);
 		@media (min-width: $mobileSmall) {
 			flex-wrap: wrap;

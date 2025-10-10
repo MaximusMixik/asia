@@ -13,9 +13,11 @@
 	}
 	// .about__img
 	&__img {
+		// about__img571 × 387 px
 		position: absolute;
 		z-index: -1;
 		object-fit: contain;
+		transform: scale(1.5);
 		@media (min-width: $mobileSmall) {
 			width: toRem(320);
 			height: toRem(308);
@@ -39,11 +41,17 @@
 	// .about__info
 	&__info {
 		position: relative;
-		font-size: toRem(19);
+		@media (min-width: $mobile) {
+			font-size: toRem(19);
+		}
+		@media (max-width: $mobile) {
+			font-size: toRem(18);
+		}
 
 		& > :first-child {
 			font-weight: 500;
 			color: var(--white);
+			font-family: $fontFamilyLufga;
 			@media (min-width: $mobile) {
 				font-size: toRem(24);
 			}

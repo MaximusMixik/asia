@@ -73,6 +73,52 @@ function borderRadiusFunction() {
 		resizeTimeout = setTimeout(applyCorners, 100);
 	});
 }
+
+// function activePageLink() {
+// 	// Все ссылки меню
+// 	// if (menuLinks.length === 0) return
+
+// 	// Получаем текущий путь (только имя файла, без папок и параметров)
+// 	let currentPage = window.location.pathname.split("/").pop();
+
+// 	// Если пусто (например index.html), можно указать дефолт
+// 	if (currentPage === "" || currentPage === "/") {
+// 		currentPage = "home.html";
+// 	}
+// 	const menuLinks = document.querySelectorAll(".menu__link");
+
+// 	menuLinks.forEach(link => {
+// 		let linkPage = link.getAttribute("href")[0]; //.split("#") убираем якорь (#)
+// 		if (linkPage === currentPage) {
+// 			link.classList.add("active"); // подсветка
+// 		}
+// 	});
+// }
 window.onload = () => {
 	borderRadiusFunction()
 }
+document.addEventListener('DOMContentLoaded', () => {
+	let currentPage = window.location.pathname.split('/').pop();
+
+	// Если пусто (например /), задаём дефолт
+	if (!currentPage) {
+		currentPage = 'home.html';
+	}
+
+	const menuLinks = document.querySelectorAll('.menu__link, .menu__pages-link');
+
+	menuLinks.forEach(link => {
+		let href = link.getAttribute('href') || '';
+
+		// пропускаем все ссылки с #
+		if (href.includes('#')) return;
+
+		// убираем параметры
+		let linkPage = href.split('?')[0].split('/').pop();
+
+		if (linkPage === currentPage) {
+			link.classList.add('active');
+			link.closest('.menu__item')?.classList.add('active');
+		}
+	});
+});
