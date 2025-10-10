@@ -129,6 +129,21 @@
 		}
 	}
 
+	&.is-active {
+		.solution-item__img {
+			height: 45%;
+			opacity: 1;
+		}
+		.solution-item__icon {
+			transform: translateX(toRem(8));
+			box-shadow: toRem(6) 0 toRem(8) 0 rgba(248, 51, 60, 0.7);
+			background-color: var(--bg-black);
+		}
+		.solution-item__content {
+			transform: translateY(toRem(-20));
+		}
+	}
+
 	& > :not(.solution-item__img) {
 		position: relative;
 		z-index: 1;

@@ -196,24 +196,3 @@ body {
 
 // Підключення стилів окремих сторінок
 @import "./pages";
-
-// !add folder custom + main.scss
-// @import "custom/main";
-
-// test
-
-// .test {
-// 	display: flex;
-// 	flex-direction: column;
-// 	gap: toRem(80);
-// 	// .test__image1
-// 	&__image1 {
-// 		@include adaptiveValue("width", 722, 400);
-// 		@include adaptiveValue("height", 608, 337);
-// 	}
-// 	// .test__image2
-// 	&__image2 {
-// 		// 1391∶1220
-// 		aspect-ratio: 1391 / 1220;
-// 	}
-// }

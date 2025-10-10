@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>HomePage</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<style>
+		body {
+			opacity: 0;
+			visibility: hidden;
+			transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
+		}
+
+		.loaded body {
+			opacity: 1;
+			visibility: visible;
+		}
+	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<!-- favicons -->
+	<meta name="description" content="Innovative Solutions for Tomorrow’s Challenges">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="apple-touch-icon" sizes="180x180" href="files/favicon/apple-touch-icon.webp">
+	<link rel="icon" type="image.webp" sizes="32x32" href="files/favicon/favicon-32x32.webp">
+	<link rel="icon" type="image.webp" sizes="16x16" href="files/favicon/favicon-16x16.webp">
+	<link rel="manifest" href="files/favicon/site.webmanifest">
+	<link rel="mask-icon" href="files/favicon/safari-pinned-tab.svg" color="#99E1D9">
+	<meta name="msapplication-TileColor" content="#00aba9">
+	<meta name="theme-color" content="#ffffff">
+
+	<link rel="stylesheet" href="css/style.min.css?_v=20251010160154">
+	<script src="js/app.min.js?_v=20251010160154" defer></script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a class="header__logo" href="home.html"><img src="img/logo.svg" alt="logo"></a>
+				<div class="header__menu menu">
+					<button type="button" class="menu__icon icon-menu" aria-label="burger menu"><span></span></button>
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<!-- active -->
+							<li class="menu__item"><a href="solutions.html" class="menu__link ">Solutions</a></li>
+							<li class="menu__item"><a href="cases.html" class="menu__link ">Case Studies</a></li>
+							<li class="menu__item"><a href="about.html" class="menu__link">About Us</a></li>
+							<li class="menu__item"><a href="home.html#contact" class="menu__link">Contacts</a></li>
+						</ul>
+						<div class="menu__pages">
+							<a href="#" class="menu__pages-link">Terms of Use</a>
+							<a href="policy.html" class="menu__pages-link">Privacy Policy</a>
+						</div>
+					</nav>
+				</div>
+				<button class="header__button button button--accent-border" data-da=".menu__body,992,0">Become Partner</button>
+			</div>
+		</header>
+		<main class="page">
+			<section class="hero">
+				<div class="hero__container">
+					<h1 class="hero__title title-1">
+						Providing Forward-Thinking
+						Solutions that Meet
+						<span>
+							Future Needs
+						</span>
+					</h1>
+					<!-- <img class="hero__image" src="img/hero/image.svg" alt="image"> -->
+					<img class="hero__image" src="img/hero/image-test.svg" alt="image">
+				</div>
+			</section>
+
+			<section class="solutions-preview section">
+				<div class="solutions-preview__container">
+					<div class="solutions-preview__header section-header">
+						<h2 class="solutions-preview__title title-2">
+							Solutions
+						</h2>
+						<a data-da=".solutions-preview__container, 480" href="solutions.html" class="solutions-preview__button button button--border">
+							See All
+						</a>
+					</div>
+					<div class="solutions-preview__slider-box">
+						<div class="solutions-preview__slider swiper-solutions">
+							<div class="solutions-preview__wrapper swiper-wrapper">
+								<article class="solutions-preview__slide item-solution swiper-slide">
+									<img loading="lazy" class="item-solution__img" src="img/home/solutions/shine1.svg" alt="decor">
+									<div class="item-solution__icon">
+										<img loading="lazy" src="img/home/solutions/icon1.svg" alt="icon">
+									</div>
+									<h3 class="item-solution__title title-5">
+										Weather Monitoring
+										and Radar Systems
+									</h3>
+								</article>
+								<article class="solutions-preview__slide item-solution swiper-slide">
+									<img loading="lazy" class="item-solution__img" src="img/home/solutions/shine2.svg" alt="decor">
+									<div class="item-solution__icon">
+										<img loading="lazy" src="img/home/solutions/icon2.svg" alt="icon">
+									</div>
+									<h3 class="item-solution__title title-5">
+										Mobile Command and
+										Tactical Response
+									</h3>
+								</article>
+								<article class="solutions-preview__slide item-solution swiper-slide">
+									<img loading="lazy" class="item-solution__img" src="img/home/solutions/shine3.svg" alt="decor">
+									<div class="item-solution__icon">
+										<img loading="lazy" src="img/home/solutions/icon3.svg" alt="icon">
+									</div>
+									<h3 class="item-solution__title title-5">
+										Airport and Visibility Systems
+									</h3>
+								</article>
+								<article class="solutions-preview__slide item-solution swiper-slide">
+									<img loading="lazy" class="item-solution__img" src="img/home/solutions/shine4.svg" alt="decor">
+									<div class="item-solution__icon">
+										<img loading="lazy" src="img/home/solutions/icon4.svg" alt="icon">
+									</div>
+									<h3 class="item-solution__title title-5">
+										Flood Protection and
+										Emergency Barriers
+									</h3>
+								</article>
+								<article class="solutions-preview__slide item-solution swiper-slide">
+									<img loading="lazy" class="item-solution__img" src="img/home/solutions/shine5.svg" alt="decor">
+									<div class="item-solution__icon">
+										<img loading="lazy" src="img/home/solutions/icon5.svg" alt="icon">
+									</div>
+									<h3 class="item-solution__title title-5">
+										Cloud Seeding and Atmospheric Engineering
+									</h3>
+								</article>
+								<article class="solutions-preview__slide item-solution swiper-slide">
+									<img loading="lazy" class="item-solution__img" src="img/home/solutions/shine6.svg" alt="decor">
+									<div class="item-solution__icon">
+										<img loading="lazy" src="img/home/solutions/icon6.svg" alt="icon">
+									</div>
+									<h3 class="item-solution__title title-5">
+										Data Collection, Visualization, and Alerting Platform
+									</h3>
+								</article>
+								<!-- repeat -->
+								<article class="solutions-preview__slide item-solution swiper-slide">
+									<img loading="lazy" class="item-solution__img" src="img/home/solutions/shine1.svg" alt="decor">
+									<div class="item-solution__icon">
+										<img loading="lazy" src="img/home/solutions/icon1.svg" alt="icon">
+									</div>
+									<h3 class="item-solution__title title-5">
+										Weather Monitoring
+										and Radar Systems
+									</h3>
+								</article>
+								<article class="solutions-preview__slide item-solution swiper-slide">
+									<img loading="lazy" class="item-solution__img" src="img/home/solutions/shine2.svg" alt="decor">
+									<div class="item-solution__icon">
+										<img loading="lazy" src="img/home/solutions/icon2.svg" alt="icon">
+									</div>
+									<h3 class="item-solution__title title-5">
+										Mobile Command and
+										Tactical Response
+									</h3>
+								</article>
+								<article class="solutions-preview__slide item-solution swiper-slide">
+									<img loading="lazy" class="item-solution__img" src="img/home/solutions/shine3.svg" alt="decor">
+									<div class="item-solution__icon">
+										<img loading="lazy" src="img/home/solutions/icon3.svg" alt="icon">
+									</div>
+									<h3 class="item-solution__title title-5">
+										Airport and Visibility Systems
+									</h3>
+								</article>
+								<article class="solutions-preview__slide item-solution swiper-slide">
+									<img loading="lazy" class="item-solution__img" src="img/home/solutions/shine4.svg" alt="decor">
+									<div class="item-solution__icon">
+										<img loading="lazy" src="img/home/solutions/icon4.svg" alt="icon">
+									</div>
+									<h3 class="item-solution__title title-5">
+										Flood Protection and
+										Emergency Barriers
+									</h3>
+								</article>
+								<article class="solutions-preview__slide item-solution swiper-slide">
+									<img loading="lazy" class="item-solution__img" src="img/home/solutions/shine5.svg" alt="decor">
+									<div class="item-solution__icon">
+										<img loading="lazy" src="img/home/solutions/icon5.svg" alt="icon">
+									</div>
+									<h3 class="item-solution__title title-5">
+										Cloud Seeding and Atmospheric Engineering
+									</h3>
+								</article>
+								<article class="solutions-preview__slide item-solution swiper-slide">
+									<img loading="lazy" class="item-solution__img" src="img/home/solutions/shine6.svg" alt="decor">
+									<div class="item-solution__icon">
+										<img loading="lazy" src="img/home/solutions/icon6.svg" alt="icon">
+									</div>
+									<h3 class="item-solution__title title-5">
+										Data Collection, Visualization, and Alerting Platform
+									</h3>
+								</article>
+
+							</div>
+
+							<div class="solutions-preview__navigation navigation">
+								<div class="navigation__buttons">
+									<button type="button" class="navigation__button navigation__button--prev " aria-label="button prev">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#arrow-left"></use>
+										</svg>
+									</button>
+									<button type="button" class="navigation__button navigation__button--next" aria-label="button next">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#arrow-right"></use>
+										</svg>
+									</button>
+								</div>
+								<div class="navigation__scrollbar"></div>
+								<div class="navigation__pagination"></div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+			</section>
+
+			<section class="last-cases section">
+				<div class="last-cases__container">
+					<img loading="lazy" class="last-cases__decor last-cases__decor--top" src="img/home/last-cases/decor-top.svg" alt="decor">
+					<img loading="lazy" class="last-cases__decor last-cases__decor--bottom" src="img/home/last-cases/decor-bottom.svg" alt="decor">
+
+					<div class="last-cases__header section-header">
+						<h2 class="last-cases__title title-2">
+							Last Cases
+						</h2>
+						<a data-da=".last-cases__container, 480" href="cases.html" class="last-cases__button button button--border">
+							All Cases
+						</a>
+					</div>
+					<div class="last-cases__slider-box">
+						<div class="last-cases__slider swiper-cases">
+							<div class="last-cases__wrapper swiper-wrapper">
+
+								<a href="article.html" class="last-cases__slide case-item swiper-slide">
+									<div class="case-item__image">
+										<img loading="lazy" src="img/page-cases/cases/image1.webp" alt="Image">
+									</div>
+									<div class="case-item__content">
+										<h2 class="case-item__title">
+											National IoT River Monitoring System for Flood Early Warning in Bangladesh
+										</h2>
+										<div class="case-item__row">
+											<div class="case-item__category badge">
+												Infrastructure Protection
+											</div>
+											<div class="case-item__year">
+												2025
+											</div>
+										</div>
+										<p class="case-item__text">
+											Spanning over 800 locations, this real-time monitoring system provided unprecedented visibility
+											into river behavior
+											across flood-prone districts — transforming how authorities anticipate and respond to natural
+											hazards.
+										</p>
+									</div>
+
+								</a>
+								<a href="article.html" class="last-cases__slide case-item swiper-slide">
+									<div class="case-item__image">
+										<img loading="lazy" src="img/page-cases/cases/image2.webp" alt="Image">
+									</div>
+									<div class="case-item__content">
+										<h2 class="case-item__title">
+											Hail Suppression in Southern France
+										</h2>
+										<div class="case-item__row">
+											<div class="case-item__category badge">
+												Climate Engineering
+											</div>
+											<div class="case-item__year">
+												2024
+											</div>
+										</div>
+										<p class="case-item__text">
+											Vineyards and high-value crops in Southern France are often hit by destructive hailstorms, causing
+											millions in
+											annual losses.
+										</p>
+									</div>
+
+								</a>
+								<a href="article.html" class="last-cases__slide case-item swiper-slide">
+									<div class="case-item__image">
+										<img loading="lazy" src="img/page-cases/cases/image3.webp" alt="Image">
+									</div>
+									<div class="case-item__content">
+										<h2 class="case-item__title">
+											Flood Defense in Ravenna, Italy
+										</h2>
+										<div class="case-item__row">
+											<div class="case-item__category badge">
+												Infrastructure Protection
+											</div>
+											<div class="case-item__year">
+												2023
+											</div>
+										</div>
+										<p class="case-item__text">
+											In May 2023, severe flooding struck Northern Italy, affecting thousands and placing critical
+											infrastructure—such as data
+											centers—at high risk in the city of Ravenna.
+										</p>
+									</div>
+
+							</div>
+							</a>
+							<a href="article.html" class="last-cases__navigation navigation">
+								<div class="navigation__buttons">
+									<button type="button" class="navigation__button navigation__button--prev " aria-label="button prev">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#arrow-left"></use>
+										</svg>
+									</button>
+									<button type="button" class="navigation__button navigation__button--next" aria-label="button next">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#arrow-right"></use>
+										</svg>
+									</button>
+								</div>
+
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="about-us section" aria-labelledby="about-us">
+				<div class="about-us__container">
+
+					<h2 class="about-us__title title-2" id="about-us">
+						About Us
+					</h2>
+					<div class="about-us__header ">
+						<p class="about-us__text">
+							Critical Solutions Asia, Inc. (CS Asia) is a regional platform company that delivers mission-critical
+							technologies
+							across the Asia-Pacific—serving national agencies, public utilities, and government partners in the fields
+							of disaster
+							resilience, weather monitoring, aviation safety, and environmental engineering.
+						</p>
+						<a href="about.html" class="about-us__button navigation__button navigation__button--next" aria-label="about page link ">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#arrow-right"></use>
+							</svg>
+						</a>
+					</div>
+
+					<div class="about-us__content content-about ">
+						<img loading="lazy" class="content-about__bg" src="img/home/about/shine.svg" alt="shine">
+						<div class="content-about__blockquote">
+							<svg class="content-about__icon">
+								<use xlink:href="img/icons/icons.svg#quotes"></use>
+							</svg>
+							<p class="content-about__text">
+								I first traveled to Asia in 1992 and spent six months exploring different countries. From that point
+								forward, I was in
+								love with Asia and always had the idea of one day living in Asia in the back of my mind.
+							</p>
+						</div>
+						<div class="content-about__author author">
+							<div class="author__card">
+								<img loading="lazy" class="author__image" src="img/home/about/Robert.webp" alt="Robert W. Kamerling">
+							</div>
+							<div class="author__name">
+								Robert W. Kamerling
+							</div>
+							<div class="author__position badge">
+								CEO & President
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+			</section>
+
+			<section class="contact section">
+				<div class="contact__container">
+
+					<img loading="lazy" class="contact__bg" src="img/home/contact/shine.svg" alt="background">
+					<h2 class="contact__title title-2" id="contact">
+						Contact Us
+					</h2>
+					<div class="contact__body">
+						<div class="contact__info ">
+							<div class="contact__address">
+								One Orchard Road, Eastwood Cybercity, Quezon City 1100 Philippines
+							</div>
+							<div class="contact__links">
+								<a href="#" target="_blank" class="contact__link">
+									<span>check on map</span>
+									<svg>
+										<use xlink:href="img/icons/icons.svg#link"></use>
+									</svg>
+								</a>
+								<a href="mailto:admin@cs-asiapac.com" target="_blank" class="contact__link contact__link--lg ">
+									<span>admin@cs-asiapac.com</span>
+									<svg>
+										<use xlink:href="img/icons/icons.svg#link"></use>
+									</svg>
+								</a>
+							</div>
+
+						</div>
+						<!-- action="" -->
+						<form class="contact__form form">
+							<div class="form__wrap">
+								<div class="form__item">
+									<label class="form__label">
+										<span class="form__label-text">
+											NAME
+										</span>
+										<input type="text" name="username" autocomplete="additional-name" required class="form__input" placeholder="Placeholder text...">
+									</label>
+								</div>
+								<div class="form__item">
+									<label class="form__label">
+										<span class="form__label-text">
+											EMAIL
+										</span>
+										<input type="text" name="email" autocomplete="email" required class="form__input" placeholder="Placeholder text...">
+									</label>
+								</div>
+								<div class="form__item">
+									<label class="form__label">
+										<span class="form__label-text">
+											Contact Number
+										</span>
+										<input type="tel" name="phone" autocomplete="tel" required class="form__input" placeholder="+112568997">
+									</label>
+								</div>
+								<div class="form__item">
+									<label class="form__label">
+										<span class="form__label-text">
+											Message
+										</span>
+										<textarea name="textarea" class="form__input" placeholder="Placeholder text..."></textarea>
+									</label>
+								</div>
+							</div>
+							<p class="form__info">
+								You agree that your data will be used to process your request. Further information can be found in the
+								<a href="policy.html" target="_blank">Privacy Policy</a>
+								page.
+							</p>
+							<button data-popup="#popup" class="form__button button button--accent">
+								Send
+							</button>
+						</form>
+					</div>
+
+				</div>
+			</section>
+
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__top">
+					<img class="footer__logo" src="img/logo.svg" alt="logo">
+					<ul class="footer__list">
+						<li class="footer__list-item">
+							<a href="solutions.html" class="footer__list-link">
+								Solutions
+							</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="cases.html" class="footer__list-link">
+								Case Studies
+							</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="about.html" class="footer__list-link">
+								About Us
+							</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="home.html#contact" class="footer__list-link">
+								Contacts
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__bottom">
+					<div class="footer__copy">
+						© 2023 - 2025 CS Asia
+					</div>
+					<div class="footer__pages">
+						<a href="#" class="footer__pages-link">Terms of Use
+						</a>
+						<span class="footer__pages-divider"> | </span>
+						<a href="policy.html" class="footer__pages-link">Privacy Policy</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div id="popup" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<h2 class="popup__title title-2">
+						Success
+					</h2>
+					<div class="popup__text">
+						Your message has been successfully sent. <br>
+						We will do our best to get in touch with you as soon as we can.
+					</div>
+					<button data-close type="button" class="popup__button button button--accent">
+						OK
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</body>
+
+</html>

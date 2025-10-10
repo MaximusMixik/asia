@@ -181,6 +181,20 @@
 			}
 		}
 	}
+	&.is-active {
+		.item-solution__img {
+			height: 65%;
+			opacity: 1;
+		}
+		.item-solution__icon {
+			transform: translateX(toRem(10));
+			box-shadow: toRem(6) 0 toRem(8) 0 rgba(248, 51, 60, 0.7);
+			background-color: var(--bg-black);
+		}
+		.item-solution__title {
+			transform: translateY(toRem(-20));
+		}
+	}
 
 	& > :not(.item-solution__img) {
 		position: relative;

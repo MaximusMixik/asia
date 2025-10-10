@@ -94,8 +94,33 @@ function borderRadiusFunction() {
 // 		}
 // 	});
 // }
+
+function initSolutionsHover() {
+	const cards = document.querySelectorAll('.item-solution, .solution-item');
+
+	if (!cards.length) return;
+
+	// проверяем, что устройство с тачскрином
+	const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+	if (!isTouch) return; // на десктопах оставляем hover
+
+	cards.forEach(card => {
+		card.addEventListener('touchstart', e => {
+			// убираем активный класс со всех
+			cards.forEach(c => c.classList.remove('is-active'));
+
+			// добавляем на текущий
+			card.classList.add('is-active');
+		});
+	});
+}
+
+
 window.onload = () => {
 	borderRadiusFunction()
+
+	initSolutionsHover();
 }
 document.addEventListener('DOMContentLoaded', () => {
 	let currentPage = window.location.pathname.split('/').pop();
