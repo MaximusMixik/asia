@@ -154,27 +154,18 @@ h6 {
 	font-family: $fontFamilyLufga;
 	font-size: toRem(15);
 	font-weight: 500;
-	// line-height: 1.2;
 	line-height: 1;
 	border-radius: toRem(50);
-	// padding: toRem(12) toRem(20);
 	padding: toRem(8) toRem(20);
 	min-height: toRem(44);
 	cursor: pointer;
 
+	transition: all 0.3s ease;
 	& svg {
 		width: toRem(24);
 		height: toRem(24);
 		object-fit: contain;
 		flex-shrink: 0;
-	}
-	@media (any-hover: hover) {
-		transition:
-			width 0.3s ease,
-			border-color 0.3s ease;
-		&:hover {
-			border-color: var(--accent);
-		}
 	}
 	&--link {
 		color: var(--tiffany);
