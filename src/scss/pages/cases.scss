@@ -16,25 +16,23 @@
 		position: absolute;
 		z-index: -1;
 		object-fit: contain;
-		transform: scale(1.3);
 		@media (min-width: $mobileSmall) {
-			width: toRem(300);
-			height: toRem(248);
-			right: toRem(-90);
-			// right: 0;
-			top: toRem(-99);
+			width: toRem(358);
+			height: toRem(360);
+			right: toRem(-98);
+			top: toRem(-155);
 		}
 		@media (min-width: $mobile) {
-			width: toRem(357);
-			height: toRem(296);
-			left: toRem(549);
-			top: toRem(-92);
+			width: toRem(424);
+			height: toRem(426);
+			left: toRem(529);
+			top: toRem(-157);
 		}
 		@media (max-width: $mobileSmall) {
-			width: toRem(250);
-			height: toRem(207);
-			right: toRem(-110);
-			top: toRem(21);
+			width: toRem(297);
+			height: toRem(298);
+			right: toRem(-160);
+			top: toRem(25);
 		}
 	}
 

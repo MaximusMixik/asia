@@ -7,19 +7,22 @@
 		object-fit: contain;
 		left: 0;
 		z-index: -1;
-		transform: translateX(-50%);
+
 		@media (min-width: $mobileSmall) {
-			width: toRem(500);
-			height: toRem(500);
-			top: toRem(532);
+			width: toRem(426);
+			height: toRem(551);
+			top: toRem(402);
+			left: toRem(-265);
 		}
 		@media (min-width: $tablet) {
-			top: toRem(810);
+			top: toRem(606);
+			left: toRem(-250);
 		}
 		@media (max-width: $mobileSmall) {
-			width: toRem(300);
-			height: toRem(300);
-			top: toRem(741);
+			width: toRem(310);
+			height: toRem(402);
+			top: toRem(626);
+			left: toRem(-195);
 		}
 	}
 	// .page__section
@@ -170,7 +173,7 @@ h6 {
 	&--link {
 		color: var(--tiffany);
 		border: toRem(2) solid var(--tiffany);
-
+		background-color: var(--bg-black);
 		font-size: toRem(14);
 		padding: toRem(8) toRem(14);
 		min-height: toRem(36);
@@ -484,22 +487,22 @@ h6 {
 		z-index: -1;
 		object-fit: contain;
 		@media (min-width: $mobileSmall) {
-			width: toRem(300);
-			height: toRem(402);
-			left: toRem(-132);
-			bottom: toRem(-147);
+			width: toRem(428);
+			height: toRem(409);
+			left: toRem(-174);
+			bottom: toRem(-156);
 		}
 		@media (min-width: $mobile) {
-			width: toRem(568);
-			height: toRem(571);
-			top: toRem(32);
-			left: toRem(-132);
+			width: toRem(608);
+			height: toRem(581);
+			top: toRem(37);
+			left: toRem(-99);
 		}
 		@media (max-width: $mobileSmall) {
-			width: toRem(300);
-			height: toRem(301);
-			left: toRem(-141);
-			bottom: toRem(-164);
+			width: toRem(322);
+			height: toRem(307);
+			left: toRem(-126);
+			bottom: toRem(-171);
 		}
 	}
 	// .content-about__blockquote
@@ -567,22 +570,22 @@ h6 {
 		z-index: -1;
 		object-fit: contain;
 		@media (min-width: $mobileSmall) {
-			width: toRem(500);
-			height: toRem(502);
-			top: toRem(-224);
-			right: toRem(-235);
+			width: toRem(428);
+			height: toRem(409);
+			top: toRem(-187);
+			right: toRem(-189);
 		}
 		@media (min-width: $mobile) {
-			width: toRem(568);
-			height: toRem(571);
+			width: toRem(608);
+			height: toRem(581);
 			top: toRem(-251);
-			right: toRem(-162);
+			right: toRem(-199);
 		}
 		@media (max-width: $mobileSmall) {
-			width: toRem(400);
-			height: toRem(401);
-			top: toRem(-181);
-			right: toRem(-170);
+			width: toRem(322);
+			height: toRem(307);
+			top: toRem(-133);
+			right: toRem(-142);
 		}
 	}
 	// .content-about__description

@@ -17,24 +17,23 @@
 		position: absolute;
 		z-index: -1;
 		object-fit: contain;
-		transform: scale(1.5);
 		@media (min-width: $mobileSmall) {
-			width: toRem(320);
-			height: toRem(308);
-			right: toRem(4);
-			top: toRem(-76);
+			width: toRem(483);
+			height: toRem(327);
+			right: toRem(-62);
+			top: toRem(-94);
 		}
 		@media (min-width: $mobile) {
-			width: toRem(379);
-			height: toRem(365);
-			left: toRem(553);
-			top: toRem(-110);
+			width: toRem(571);
+			height: toRem(387);
+			left: toRem(455);
+			top: toRem(-126);
 		}
 		@media (max-width: $mobileSmall) {
-			width: toRem(250);
-			height: toRem(240);
-			right: toRem(-89);
-			top: toRem(5);
+			width: toRem(367);
+			height: toRem(255);
+			right: toRem(-133);
+			top: toRem(10);
 		}
 	}
 

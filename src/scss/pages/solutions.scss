@@ -16,25 +16,23 @@
 		z-index: -1;
 		object-fit: contain;
 		max-width: initial;
-		transform: scale(1.3);
 		@media (min-width: $mobileSmall) {
-			width: toRem(400);
-			height: toRem(226);
-			right: toRem(-76);
-			top: toRem(-80);
+			right: toRem(-66);
+			top: toRem(-129);
 		}
 		@media (min-width: $mobile) {
-			width: toRem(443);
-			height: toRem(250);
-			left: toRem(581);
-			top: toRem(-66);
+			width: toRem(568);
+			height: toRem(350);
+			left: toRem(478);
+			top: toRem(-120);
+		}
+		@media (max-width: $mobile) {
+			width: toRem(512);
+			height: toRem(317);
 		}
 		@media (max-width: $mobileSmall) {
-			width: toRem(400);
-			height: toRem(226);
-			// right: toRem(-220);
-			right: toRem(-150);
-			top: toRem(26);
+			right: toRem(-227);
+			top: toRem(24);
 		}
 	}
 
@@ -115,7 +113,7 @@
 	@media (any-hover: hover) {
 		&:hover {
 			.solution-item__img {
-				height: 45%;
+				height: 60%;
 				opacity: 1;
 			}
 			.solution-item__icon {
@@ -131,7 +129,7 @@
 
 	&.is-active {
 		.solution-item__img {
-			height: 45%;
+			height: 60%;
 			opacity: 1;
 		}
 		.solution-item__icon {

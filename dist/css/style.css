@@ -263,7 +263,7 @@ body::after {
   transition: transform .3s ease 0s,-webkit-transform .3s ease 0s;
   width: 100%;
   box-shadow: 0 .625rem 2.625rem 0 rgba(0,0,0,.4);
-  background: radial-gradient(123.1% 129.95% at 91.34% 31.81%,#1c262c 77.13%,#224f4a 100%);
+  background: radial-gradient(123.1% 129.95% at 99.34% 31.81%,#1c262c 77.13%,#224f4a 100%);
   border: .125rem solid #222e35;
   border-radius: .75rem;
   text-align: center;
@@ -280,7 +280,12 @@ body::after {
   transform: scale(1)
 }
 .popup__title {
-  font-size: 2.375rem
+  max-width: -webkit-max-content;
+  max-width: max-content;
+  background: linear-gradient(57deg,#fff 30%,#92a4af 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent
 }
 .popup__title:not(:last-child) {
   margin-bottom: .5rem
@@ -322,9 +327,7 @@ body::after {
   -o-object-fit: contain;
   object-fit: contain;
   left: 0;
-  z-index: -1;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%)
+  z-index: -1
 }
 .page__header {
   position: relative
@@ -405,6 +408,7 @@ h2 {
 .button--link {
   color: var(--tiffany);
   border: .125rem solid var(--tiffany);
+  background-color: var(--bg-black);
   font-size: .875rem;
   padding: .5rem .875rem;
   min-height: 2.25rem
@@ -664,8 +668,7 @@ h2 {
   margin-inline: auto
 }
 .header {
-  position: relative;
-  z-index: 10
+  position: relative
 }
 .header::after {
   content: "";
@@ -673,12 +676,9 @@ h2 {
   top: 0;
   z-index: -1;
   pointer-events: none;
-  height: 25rem;
   width: 100%;
-  background-position: top right;
   background-repeat: no-repeat;
-  background-size: cover;
-  opacity: .8
+  background-size: 100%
 }
 .header__container {
   display: flex;
@@ -696,15 +696,14 @@ h2 {
 .footer::after {
   content: "";
   position: absolute;
-  top: -15.625rem;
   z-index: -1;
   pointer-events: none;
-  height: 15.625rem;
   width: 100%;
-  background-position: bottom right;
+  background-position: bottom;
   background-repeat: no-repeat;
-  background-size: cover;
-  opacity: .8
+  bottom: 0;
+  background-size: 100%;
+  bottom: 100%
 }
 .footer__container {
   display: flex;
@@ -801,7 +800,7 @@ h2 {
 .item-solution__img {
   position: absolute;
   width: 100%;
-  height: 45%;
+  height: 55%;
   top: 0;
   left: 0;
   -o-object-fit: cover;
@@ -935,15 +934,6 @@ h2 {
 .contact__container {
   position: relative
 }
-.contact__bg {
-  position: absolute;
-  -o-object-fit: contain;
-  object-fit: contain;
-  z-index: -1;
-  max-width: initial;
-  left: 0;
-  aspect-ratio: 1185/653
-}
 .contact__title:not(:last-child) {
   margin-bottom: 2rem
 }
@@ -1046,9 +1036,7 @@ h2 {
   z-index: -1;
   -o-object-fit: contain;
   object-fit: contain;
-  max-width: initial;
-  -webkit-transform: scale(1.3);
-  transform: scale(1.3)
+  max-width: initial
 }
 .solutions__content {
   margin-left: auto
@@ -1078,7 +1066,7 @@ h2 {
   gap: 8.75rem
 }
 .solution-item.is-active .solution-item__img {
-  height: 45%;
+  height: 60%;
   opacity: 1
 }
 .solution-item.is-active .solution-item__icon {
@@ -1227,9 +1215,7 @@ h2 {
   position: absolute;
   z-index: -1;
   -o-object-fit: contain;
-  object-fit: contain;
-  -webkit-transform: scale(1.5);
-  transform: scale(1.5)
+  object-fit: contain
 }
 .about__info {
   position: relative
@@ -1252,9 +1238,7 @@ h2 {
   position: absolute;
   z-index: -1;
   -o-object-fit: contain;
-  object-fit: contain;
-  -webkit-transform: scale(1.3);
-  transform: scale(1.3)
+  object-fit: contain
 }
 .cases__list {
   display: grid;
@@ -1295,8 +1279,15 @@ h2 {
 .page-404 {
   flex: 1 1 auto;
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center
+}
+.page-404__decor {
+  position: absolute;
+  -o-object-fit: contain;
+  object-fit: contain;
+  z-index: -1
 }
 .full__container {
   display: grid;
@@ -1963,10 +1954,14 @@ button.swiper-pagination-bullet {
     padding: 4rem 3.25rem;
     width: 31.25rem
   }
+  .popup__title {
+    font-size: 2.375rem
+  }
   .page__decor-top {
-    width: 31.25rem;
-    height: 31.25rem;
-    top: 33.25rem
+    width: 26.625rem;
+    height: 34.4375rem;
+    top: 25.125rem;
+    left: -16.5625rem
   }
   .page__section {
     padding-block: 8.5625rem 13.75rem
@@ -1995,10 +1990,10 @@ button.swiper-pagination-bullet {
     justify-content: flex-end
   }
   .content-about__bg {
-    width: 18.75rem;
-    height: 25.125rem;
-    left: -8.25rem;
-    bottom: -9.1875rem
+    width: 26.75rem;
+    height: 25.5625rem;
+    left: -10.875rem;
+    bottom: -9.75rem
   }
   .content-about__text {
     font-size: 1.75rem
@@ -2007,13 +2002,14 @@ button.swiper-pagination-bullet {
     flex-basis: 18.75rem
   }
   .content-about__decor {
-    width: 31.25rem;
-    height: 31.375rem;
-    top: -14rem;
-    right: -14.6875rem
+    width: 26.75rem;
+    height: 25.5625rem;
+    top: -11.6875rem;
+    right: -11.8125rem
   }
   .header::after {
-    background-image: url(../img/header/decore-lg.svg)
+    background-image: url(../img/header/decore-lg.svg);
+    height: 10.5625rem
   }
   .header__button {
     max-width: -moz-fit-content;
@@ -2021,7 +2017,12 @@ button.swiper-pagination-bullet {
     max-width: fit-content
   }
   .footer::after {
+    height: 10.5625rem;
     background-image: url(../img/footer/decor-lg.svg)
+  }
+  .wrapper--home .footer::after {
+    height: 16.3125rem;
+    background-image: url(../img/footer/home-decor-lg.svg)
   }
   .footer__list {
     flex-wrap: wrap;
@@ -2039,8 +2040,8 @@ button.swiper-pagination-bullet {
     padding-bottom: 11.25rem
   }
   .hero__image {
-    top: 5rem;
-    right: -10.75rem
+    top: 4.9375rem;
+    right: -12.75rem
   }
   .solutions-preview__navigation .navigation__pagination,
   .solutions-preview__navigation .navigation__scrollbar {
@@ -2050,28 +2051,22 @@ button.swiper-pagination-bullet {
     margin-left: auto
   }
   .last-cases__decor--top {
-    width: 20.0625rem;
-    height: 25.9375rem;
-    top: -19.375rem;
-    left: -14.5rem
+    width: 26.625rem;
+    height: 34.4375rem;
+    top: -22.4375rem;
+    left: -18.625rem
   }
   .last-cases__decor--bottom {
-    width: 25rem;
-    height: 38.5rem;
-    bottom: -31.125rem;
-    right: -20.25rem
+    width: 31.4375rem;
+    height: 45.1875rem;
+    bottom: -36rem;
+    right: -25.25rem
   }
   .about-us__header {
     padding-left: 7.5rem
   }
   .about-us__text {
     font-size: 1.375rem
-  }
-  .contact__bg {
-    width: 62.5rem;
-    top: 100%;
-    -webkit-transform: translateX(-45%);
-    transform: translateX(-45%)
   }
   .contact__info {
     max-width: 26.125rem
@@ -2083,10 +2078,8 @@ button.swiper-pagination-bullet {
     margin-left: auto
   }
   .solutions__img {
-    width: 25rem;
-    height: 14.125rem;
-    right: -4.75rem;
-    top: -5rem
+    right: -4.125rem;
+    top: -8.0625rem
   }
   .solutions__content {
     max-width: 29rem
@@ -2117,23 +2110,29 @@ button.swiper-pagination-bullet {
     text-align: right
   }
   .about__img {
-    width: 20rem;
-    height: 19.25rem;
-    right: .25rem;
-    top: -4.75rem
+    width: 30.1875rem;
+    height: 20.4375rem;
+    right: -3.875rem;
+    top: -5.875rem
   }
   .about__info {
     padding-left: 34.1%
   }
   .cases__img {
-    width: 18.75rem;
-    height: 15.5rem;
-    right: -5.625rem;
-    top: -6.1875rem
+    width: 22.375rem;
+    height: 22.5rem;
+    right: -6.125rem;
+    top: -9.6875rem
   }
   .cases__list {
     grid-template-columns: repeat(2,1fr);
     gap: 2.5rem 1rem
+  }
+  .page-404__decor {
+    width: 26.625rem;
+    height: 34.4375rem;
+    top: 10.0625rem;
+    left: -16.5625rem
   }
   .full__button {
     max-width: -webkit-max-content;
@@ -2169,10 +2168,10 @@ button.swiper-pagination-bullet {
     padding-block: 6.875rem
   }
   .content-about__bg {
-    width: 35.5rem;
-    height: 35.6875rem;
-    top: 2rem;
-    left: -8.25rem
+    width: 38rem;
+    height: 36.3125rem;
+    top: 2.3125rem;
+    left: -6.1875rem
   }
   .content-about__text {
     font-size: 2rem
@@ -2181,16 +2180,17 @@ button.swiper-pagination-bullet {
     flex-basis: 22.25rem
   }
   .content-about__decor {
-    width: 35.5rem;
-    height: 35.6875rem;
+    width: 38rem;
+    height: 36.3125rem;
     top: -15.6875rem;
-    right: -10.125rem
+    right: -12.4375rem
   }
   .content-about__description {
     font-size: 1.1875rem
   }
   .header::after {
-    background-image: url(../img/header/decore.svg)
+    background-image: url(../img/header/decore.svg);
+    height: 11.6875rem
   }
   .header__container {
     min-height: 9.375rem;
@@ -2204,7 +2204,12 @@ button.swiper-pagination-bullet {
     padding-bottom: 5rem
   }
   .footer::after {
+    height: 22.4375rem;
     background-image: url(../img/footer/decor.svg)
+  }
+  .wrapper--home .footer::after {
+    height: 25rem;
+    background-image: url(../img/footer/home-decor.svg)
   }
   .footer__top {
     justify-content: space-between
@@ -2221,20 +2226,14 @@ button.swiper-pagination-bullet {
     max-width: 53.125rem
   }
   .hero__image {
-    top: 4.125rem;
-    right: -12.0625rem
+    top: 3.0625rem;
+    right: -10.75rem
   }
   .case-item__content {
     padding-inline: 1rem
   }
   .contact {
     padding-bottom: 13.75rem
-  }
-  .contact__bg {
-    width: 74.0625rem;
-    top: 90%;
-    -webkit-transform: translateX(-30%);
-    transform: translateX(-30%)
   }
   .contact__address {
     font-size: 1.375rem
@@ -2246,10 +2245,10 @@ button.swiper-pagination-bullet {
     font-size: 1.375rem
   }
   .solutions__img {
-    width: 27.6875rem;
-    height: 15.625rem;
-    left: 36.3125rem;
-    top: -4.125rem
+    width: 35.5rem;
+    height: 21.875rem;
+    left: 29.875rem;
+    top: -7.5rem
   }
   .solutions__content {
     max-width: 41.625rem
@@ -2278,10 +2277,10 @@ button.swiper-pagination-bullet {
     font-size: 1.1875rem
   }
   .about__img {
-    width: 23.6875rem;
-    height: 22.8125rem;
-    left: 34.5625rem;
-    top: -6.875rem
+    width: 35.6875rem;
+    height: 24.1875rem;
+    left: 28.4375rem;
+    top: -7.875rem
   }
   .about__info {
     font-size: 1.1875rem
@@ -2293,16 +2292,13 @@ button.swiper-pagination-bullet {
     padding-left: 45.6%
   }
   .cases__img {
-    width: 22.3125rem;
-    height: 18.5rem;
-    left: 34.3125rem;
-    top: -5.75rem
+    width: 26.5rem;
+    height: 26.625rem;
+    left: 33.0625rem;
+    top: -9.8125rem
   }
   .page-404 {
     padding-block: 9.375rem 17.5rem
-  }
-  .full__decor {
-    display: none
   }
   .full__text {
     font-size: 1.1875rem
@@ -2319,7 +2315,8 @@ button.swiper-pagination-bullet {
     display: none
   }
   .page__decor-top {
-    top: 50.625rem
+    top: 37.875rem;
+    left: -15.625rem
   }
   .title-1,
   h1 {
@@ -2347,14 +2344,14 @@ button.swiper-pagination-bullet {
     flex: 1 1 auto
   }
   .last-cases__decor--top {
-    top: -10.6875rem;
-    left: -33.125rem
+    top: -21.5625rem;
+    left: -37.375rem
   }
   .last-cases__decor--bottom {
-    width: 31.5625rem;
-    height: 48.5625rem;
-    bottom: -32.6875rem;
-    right: -41.75rem
+    width: 39.8125rem;
+    height: 57.1875rem;
+    bottom: -38.9375rem;
+    right: -47.875rem
   }
   .about-us__header {
     padding-inline: 19.375rem 3.875rem
@@ -2378,16 +2375,20 @@ button.swiper-pagination-bullet {
   .cases__list {
     grid-template-columns: repeat(3,1fr)
   }
+  .page-404__decor {
+    top: 12.625rem;
+    left: -15.625rem
+  }
 }
 @media (min-width:80.5em) {
   .header__container {
     gap: 13.75rem
   }
   .hero__image {
-    width: 45.0625rem
+    width: 45.1875rem
   }
   .hero__image {
-    height: 38rem
+    height: 39.625rem
   }
   .full__image {
     width: 43.75rem
@@ -2556,6 +2557,10 @@ button.swiper-pagination-bullet {
   .contact__link--lg {
     font-size: 1.25rem
   }
+  .solutions__img {
+    width: 32rem;
+    height: 19.8125rem
+  }
   .solutions__description {
     font-size: 1.375rem
   }
@@ -2583,17 +2588,6 @@ button.swiper-pagination-bullet {
   }
   .page-404 {
     padding-block: 8.5rem 13.75rem
-  }
-  .full__decor {
-    position: absolute;
-    -o-object-fit: contain;
-    object-fit: contain;
-    top: 0;
-    z-index: -1;
-    width: 31.25rem;
-    height: 31.25rem;
-    left: -21.875rem;
-    top: 4.9375rem
   }
   .full__text {
     font-size: 1.125rem
@@ -2627,13 +2621,17 @@ button.swiper-pagination-bullet {
     padding: 2.5rem 1.5rem;
     width: 20.5rem
   }
+  .popup__title {
+    font-size: 2rem
+  }
   .popup__button {
     width: 100%
   }
   .page__decor-top {
-    width: 18.75rem;
-    height: 18.75rem;
-    top: 46.3125rem
+    width: 19.375rem;
+    height: 25.125rem;
+    top: 39.125rem;
+    left: -12.1875rem
   }
   .page__section {
     padding-block: 4.6875rem 13.75rem
@@ -2658,25 +2656,31 @@ button.swiper-pagination-bullet {
     font-size: 1.1875rem
   }
   .content-about__bg {
-    width: 18.75rem;
-    height: 18.8125rem;
-    left: -8.8125rem;
-    bottom: -10.25rem
+    width: 20.125rem;
+    height: 19.1875rem;
+    left: -7.875rem;
+    bottom: -10.6875rem
   }
   .content-about__text {
     font-size: 1.625rem
   }
   .content-about__decor {
-    width: 25rem;
-    height: 25.0625rem;
-    top: -11.3125rem;
-    right: -10.625rem
+    width: 20.125rem;
+    height: 19.1875rem;
+    top: -8.3125rem;
+    right: -8.875rem
   }
   .header::after {
+    height: 10.9375rem;
     background-image: url(../img/header/decore-mob.svg)
   }
   .footer::after {
+    height: 6.9375rem;
     background-image: url(../img/footer/decor-mob.svg)
+  }
+  .wrapper--home .footer::after {
+    height: 14.3125rem;
+    background-image: url(../img/footer/home-decor-mob.svg)
   }
   .footer__list {
     flex-direction: column
@@ -2705,23 +2709,23 @@ button.swiper-pagination-bullet {
     max-width: 39.125rem
   }
   .hero__image {
-    top: 11.8125rem;
+    top: 11.75rem;
     right: -11.6875rem
   }
   .solutions-preview__navigation .navigation__buttons {
     display: none
   }
   .last-cases__decor--top {
-    width: 14.6875rem;
-    height: 19.0625rem;
-    top: -13.625rem;
-    left: -10.0625rem
+    width: 19.375rem;
+    height: 25.125rem;
+    top: -16.125rem;
+    left: -13.125rem
   }
   .last-cases__decor--bottom {
-    width: 17.8125rem;
-    height: 27.4375rem;
-    bottom: -24.0625rem;
-    right: -13.125rem
+    width: 22.5rem;
+    height: 32.3125rem;
+    bottom: -27.5625rem;
+    right: -16.6875rem
   }
   .last-cases__wrapper {
     display: grid!important;
@@ -2736,12 +2740,6 @@ button.swiper-pagination-bullet {
   .about-us__text {
     font-size: 1.25rem
   }
-  .contact__bg {
-    width: 43.75rem;
-    top: calc(100% + 3.625rem);
-    -webkit-transform: translateX(-55%);
-    transform: translateX(-55%)
-  }
   .contact__form {
     padding: 2rem 1rem 4rem
   }
@@ -2749,10 +2747,8 @@ button.swiper-pagination-bullet {
     width: 100%
   }
   .solutions__img {
-    width: 25rem;
-    height: 14.125rem;
-    right: -9.375rem;
-    top: 1.625rem
+    right: -14.1875rem;
+    top: 1.5rem
   }
   .solution-item {
     min-height: 38.75rem;
@@ -2763,25 +2759,25 @@ button.swiper-pagination-bullet {
     align-items: flex-start
   }
   .about__img {
-    width: 15.625rem;
-    height: 15rem;
-    right: -5.5625rem;
-    top: .3125rem
+    width: 22.9375rem;
+    height: 15.9375rem;
+    right: -8.3125rem;
+    top: .625rem
   }
   .cases__img {
-    width: 15.625rem;
-    height: 12.9375rem;
-    right: -6.875rem;
-    top: 1.3125rem
+    width: 18.5625rem;
+    height: 18.625rem;
+    right: -10rem;
+    top: 1.5625rem
   }
   .cases__list {
     gap: 3.75rem 1rem
   }
-  .full__decor {
-    width: 18.75rem;
-    height: 18.75rem;
-    left: -10.625rem;
-    top: 5.0625rem
+  .page-404__decor {
+    width: 19.375rem;
+    height: 25.125rem;
+    top: 11.125rem;
+    left: -12.1875rem
   }
 }
 @media (max-width:27.8125em) {
@@ -2795,7 +2791,7 @@ button.swiper-pagination-bullet {
     width: 25rem
   }
   .hero__image {
-    height: 21.0625rem
+    height: 21.9375rem
   }
   .full__image {
     width: 18.125rem
@@ -2834,10 +2830,10 @@ button.swiper-pagination-bullet {
 }
 @media (min-width:22.5em)and (max-width:80.5em) {
   .hero__image {
-    width: clamp(25rem ,17.2171336207rem + 34.5905172414vw ,45.0625rem)
+    width: clamp(25rem ,17.1686422414rem + 34.8060344828vw ,45.1875rem)
   }
   .hero__image {
-    height: clamp(21.0625rem ,14.4919181034rem + 29.2025862069vw ,38rem)
+    height: clamp(21.9375rem ,15.0759698276rem + 30.4956896552vw ,39.625rem)
   }
   .full__image {
     width: clamp(18.125rem ,8.1842672414rem + 44.1810344828vw ,43.75rem)
@@ -2894,7 +2890,7 @@ button.swiper-pagination-bullet {
     color: var(--tiffany)
   }
   .item-solution:hover .item-solution__img {
-    height: 65%;
+    height: 76%;
     opacity: 1
   }
   .item-solution:hover .item-solution__icon {
@@ -2914,7 +2910,7 @@ button.swiper-pagination-bullet {
     border-color: var(--tiffany)
   }
   .solution-item:hover .solution-item__img {
-    height: 45%;
+    height: 60%;
     opacity: 1
   }
   .solution-item:hover .solution-item__icon {
