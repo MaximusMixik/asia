@@ -668,7 +668,8 @@ h2 {
   margin-inline: auto
 }
 .header {
-  position: relative
+  position: relative;
+  z-index: 10
 }
 .header::after {
   content: "";
