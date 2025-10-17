@@ -51,6 +51,10 @@
             }
         }));
     }
+    function functions_menuClose() {
+        bodyUnlock();
+        document.documentElement.classList.remove("menu-open");
+    }
     function functions_FLS(message) {
         setTimeout((() => {
             if (window.FLS) console.log(message);
@@ -4249,9 +4253,19 @@
             }));
         }));
     }
+    function closeMenuAfterClick() {
+        const links = document.querySelectorAll(".menu__link ");
+        if (!links) return;
+        links.forEach((link => {
+            link.addEventListener("click", (() => {
+                functions_menuClose();
+            }));
+        }));
+    }
     window.onload = () => {
         borderRadiusFunction();
         initSolutionsHover();
+        closeMenuAfterClick();
     };
     document.addEventListener("DOMContentLoaded", (() => {
         let currentPage = window.location.pathname.split("/").pop();
